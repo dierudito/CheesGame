@@ -4,15 +4,15 @@ namespace Moreno.ChessGame.Domain.Entities;
 
 public class BoardEntity : Entity
 {
-    public ICollection<BoardSquare> Squares { get; private set; }
+    public ICollection<BoardSquareEntity> Squares { get; private set; }
 
     public BoardEntity()
     {
-        Squares = new List<BoardSquare>();
+        Squares = new List<BoardSquareEntity>();
     }
 
-    public void AddSquare (BoardSquare square)
+    public void AddSquare (BoardSquareEntity squareEntity)
     {
-        Squares.Add(square);
+        Squares.Add(squareEntity);
     }
 }

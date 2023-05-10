@@ -3,7 +3,7 @@ using Moreno.ChessGame.Domain.Enums;
 
 namespace Moreno.ChessGame.Domain.Entities;
 
-public class BoardSquare : Entity
+public class BoardSquareEntity : Entity
 {
     public Guid BoardId { get; private set; }
     public ColorEnum Color { get; private set; }
