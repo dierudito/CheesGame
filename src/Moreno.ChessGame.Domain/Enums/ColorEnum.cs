@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Moreno.ChessGame.Domain.Enums;
 
-namespace Moreno.ChessGame.Domain.Enums
+public enum ColorEnum : byte
 {
-    internal class ColorEnum
-    {
-    }
+    White,
+    Black
 }
