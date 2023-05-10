@@ -6,8 +6,8 @@ namespace Moreno.ChessGame.Domain.Entities;
 
 public class BishopPiece : PieceEntity
 {
-    private const PieceTypeEnum PieceTypeEnum = PieceTypeEnum.Bishop;
-    public BishopPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) : base(PieceTypeEnum, colorEnum, pieceAddressDto)
+    private const PieceTypeEnum _pieceTypeEnum = PieceTypeEnum.Bishop;
+    public BishopPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) : base(_pieceTypeEnum, colorEnum, pieceAddressDto)
     {
     }
 
@@ -25,9 +25,9 @@ public class BishopPiece : PieceEntity
 
     public static IList<BishopPiece> CreateAllBishops() => new List<BishopPiece>
     {
-        BishopPiece.CreateWhiteBishopOfQueen(),
-        BishopPiece.CreateWhiteBishopOfKing(),
-        BishopPiece.CreateBlackBishopOfQueen(),
-        BishopPiece.CreateBlackBishopOfKing()
+        CreateWhiteBishopOfQueen(),
+        CreateWhiteBishopOfKing(),
+        CreateBlackBishopOfQueen(),
+        CreateBlackBishopOfKing()
     };
 }

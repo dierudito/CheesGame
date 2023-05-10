@@ -6,9 +6,9 @@ namespace Moreno.ChessGame.Domain.Entities;
 
 public class PawnPiece : PieceEntity
 {
-    private const PieceTypeEnum PieceTypeEnum = PieceTypeEnum.Pawn;
+    private const PieceTypeEnum _pieceTypeEnum = PieceTypeEnum.Pawn;
     public PawnPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
-        base(PieceTypeEnum, colorEnum, pieceAddressDto)
+        base(_pieceTypeEnum, colorEnum, pieceAddressDto)
     {
     }
 
@@ -22,13 +22,15 @@ public class PawnPiece : PieceEntity
     {
         var paws = new List<PawnPiece>();
 
-        for (byte i = BoardColumnEnum.A; i <= BoardColumnEnum.H; i++)
+        for (var i = BoardColumnEnum.A; i <= BoardColumnEnum.H; i++)
         {
-            var addressWhitePawn = new PieceAddressDto((BoardColumnEnum)i, BoardRowEnum.Two);
-            var addressBlackPawn = new PieceAddressDto((BoardColumnEnum)i, BoardRowEnum.Seven);
+            var addressWhitePawn = new PieceAddressDto(i, BoardRowEnum.Two);
+            var addressBlackPawn = new PieceAddressDto(i, BoardRowEnum.Seven);
 
-            paws.Add(new PawnPiece(ColorEnum.White, addressWhitePawn));
-            paws.Add(new PawnPiece(ColorEnum.Black, addressBlackPawn));
+            paws.Add(new(ColorEnum.White, addressWhitePawn));
+            paws.Add(new(ColorEnum.Black, addressBlackPawn));
         }
+
+        return paws;
     }
 }

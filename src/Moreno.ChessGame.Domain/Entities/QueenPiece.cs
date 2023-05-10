@@ -6,9 +6,9 @@ namespace Moreno.ChessGame.Domain.Entities;
 
 public class QueenPiece : PieceEntity
 {
-    private const PieceTypeEnum PieceTypeEnum = PieceTypeEnum.Queen;
+    private const PieceTypeEnum _pieceTypeEnum = PieceTypeEnum.Queen;
     public QueenPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
-        base(PieceTypeEnum, colorEnum, pieceAddressDto)
+        base(_pieceTypeEnum, colorEnum, pieceAddressDto)
     {
     }
 

@@ -6,9 +6,9 @@ namespace Moreno.ChessGame.Domain.Entities;
 
 public class RookPiece : PieceEntity
 {
-    private const PieceTypeEnum PieceTypeEnum = PieceTypeEnum.Rook;
+    private const PieceTypeEnum _pieceTypeEnum = PieceTypeEnum.Rook;
     public RookPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
-        base(PieceTypeEnum, colorEnum, pieceAddressDto)
+        base(_pieceTypeEnum, colorEnum, pieceAddressDto)
     {
     }
 
