@@ -35,8 +35,6 @@ file static class WaysPiece
 {
     public static IList<PieceAddressDto> GetWays(
         PieceAddressDto pieceAddressDto, IList<BoardSquareEntity> boardSquares) =>
-        boardSquares
-        .Where(bs => bs.Column == pieceAddressDto.Column || bs.Row == pieceAddressDto.Row)
-        .Select(bs => new PieceAddressDto(bs.Column, bs.Row)).ToList();
+        WaysPositions.GetLineWay(pieceAddressDto, boardSquares);
 
 }

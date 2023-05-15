@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moreno.ChessGame.Domain", "src\Moreno.ChessGame.Domain\Moreno.ChessGame.Domain.csproj", "{CAB89F55-A4E2-4E98-ACDD-8689CFBD3F87}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EEE0AC4A-390C-42D2-964F-6CB95957E974}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moreno.ChessGame.UnitaryTests", "tests\Moreno.ChessGame.Tests\Moreno.ChessGame.UnitaryTests.csproj", "{7D5E6808-B31D-4970-96F0-F0CD587E9DE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{CAB89F55-A4E2-4E98-ACDD-8689CFBD3F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAB89F55-A4E2-4E98-ACDD-8689CFBD3F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAB89F55-A4E2-4E98-ACDD-8689CFBD3F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D5E6808-B31D-4970-96F0-F0CD587E9DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5E6808-B31D-4970-96F0-F0CD587E9DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5E6808-B31D-4970-96F0-F0CD587E9DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5E6808-B31D-4970-96F0-F0CD587E9DE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CAB89F55-A4E2-4E98-ACDD-8689CFBD3F87} = {4A4D3E05-0F32-491E-973C-DBFD19769E1F}
+		{7D5E6808-B31D-4970-96F0-F0CD587E9DE3} = {EEE0AC4A-390C-42D2-964F-6CB95957E974}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A85E843E-8B11-4F36-8FA8-4928C6630337}

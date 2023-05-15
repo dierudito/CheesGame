@@ -25,7 +25,7 @@ public class KingPieceEntity : PieceEntity
     public static KingPieceEntity CreateBlackKing() =>
         new(ColorEnum.Black, new(BoardColumnEnum.D, BoardRowEnum.Eight));
 
-    public static IList<KingPieceEntity> CreateAllQueens() => new List<KingPieceEntity>
+    public static IList<KingPieceEntity> CreateAllKings() => new List<KingPieceEntity>
     {
         CreateWhiteKing(),
         CreateBlackKing()

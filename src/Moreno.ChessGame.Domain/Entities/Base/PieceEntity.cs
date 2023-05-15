@@ -32,8 +32,9 @@ public abstract class PieceEntity : Entity
     {
         WasCaptured = true;
     }
-    public virtual void AddPieceOnTheBoard(Guid boardId)
+    public virtual void AddPieceOnTheBoard(Guid boardId, BoardEntity boardEntity)
     {
         BoardId = boardId;
+        BoardEntity = boardEntity;
     }
 }
