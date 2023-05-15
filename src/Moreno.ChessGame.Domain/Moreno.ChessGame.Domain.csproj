@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DomainValidationCore" Version="1.1.1" />
     <PackageReference Include="FluentValidation" Version="11.5.2" />
   </ItemGroup>
 
