@@ -82,28 +82,6 @@ public class BishopPieceEntityTest
         response.Should().HaveCount(expectedCount);
     }
 
-    [Fact(DisplayName = "Should move to another address diagonally west successfully")]
-    [Trait("Bishop Piece", "Domain")]
-    public void ShouldMoveToAnotherAddressDiagonallyWestSuccessfully()
-    {
-        // Arrange
-        var bishop =
-            new BishopPieceEntity(ColorEnum.White, new(BoardColumnEnum.C, BoardRowEnum.One));
-
-        var board = BoardMock.Create();
-
-        bishop.AddPieceOnTheBoard(board.Id, board);
-
-        var targetAddress = new PieceAddressDto(BoardColumnEnum.B, BoardRowEnum.Two);
-
-        // Act
-        bishop.MoveTo(targetAddress);
-
-        // Assert
-        bishop.PieceAddressDto.Should().BeEquivalentTo(targetAddress);
-        bishop.HasMoved.Should().BeTrue();
-    }
-
     [Theory(DisplayName = "Should move to another address successfully")]
     [InlineData(BoardColumnEnum.C, BoardRowEnum.One, BoardColumnEnum.B, BoardRowEnum.Two)]
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Four, BoardColumnEnum.G, BoardRowEnum.Seven)]

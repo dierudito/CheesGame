@@ -1,7 +1,4 @@
-﻿using FluentAssertions;
-using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities.Pieces;
-using Moreno.ChessGame.Domain.Enums;
+﻿using Moreno.ChessGame.Domain.Dtos;
 using Moreno.ChessGame.UnitaryTests.Shared.Mocks;
 
 namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
@@ -129,7 +126,7 @@ public class KingPieceEntityTest
     {
         // Arrange
         var king =
-            new KingPieceEntity(ColorEnum.White, new(columnSource, rowSource-1));
+            new KingPieceEntity(ColorEnum.White, new(columnSource, rowSource - 1));
 
         var board = BoardMock.Create();
 

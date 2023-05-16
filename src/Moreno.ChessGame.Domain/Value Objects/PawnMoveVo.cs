@@ -43,11 +43,11 @@ file static class ToWhitePieces
     public static bool IsValid(
         IList<PieceAddressDto> wayPiece, bool hasMoved, PieceAddressDto sourceAddress, PieceAddressDto targetAddress)
     {
-        var possibleWays = wayPiece.Where(wp => wp.Row > sourceAddress.Row);
+        var possibleWays =
+            wayPiece.Where(wp => wp.Row == sourceAddress.Row+1 || 
+                                (!hasMoved && wp.Row == sourceAddress.Row + 2));
 
-        if (possibleWays.Any(pw => pw.Row + 1 == targetAddress.Row)) return true;
-        if (!hasMoved && possibleWays.Any(pw => pw.Row + 2 == targetAddress.Row)) return true;
-        return false;
+        return possibleWays.Any(pw => pw.Row == targetAddress.Row);
     }
 }
 
@@ -56,10 +56,10 @@ file static class ToBlackPieces
     public static bool IsValid(
         IList<PieceAddressDto> wayPiece, bool hasMoved, PieceAddressDto sourceAddress, PieceAddressDto targetAddress)
     {
-        var possibleWays = wayPiece.Where(wp => wp.Row > sourceAddress.Row);
+        var possibleWays =
+            wayPiece.Where(wp => wp.Row == sourceAddress.Row - 1 ||
+                                (!hasMoved && wp.Row == sourceAddress.Row - 2));
 
-        if (possibleWays.Any(pw => pw.Row - 1 == targetAddress.Row)) return true;
-        if (!hasMoved && possibleWays.Any(pw => pw.Row - 2 == targetAddress.Row)) return true;
-        return false;
+        return possibleWays.Any(pw => pw.Row == targetAddress.Row);
     }
 }
