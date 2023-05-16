@@ -1,4 +1,4 @@
-﻿using DomainValidationCore.Validation;
+﻿using DomainValidation.Validation;
 
 namespace Moreno.ChessGame.Domain.Entities.Base;
 
