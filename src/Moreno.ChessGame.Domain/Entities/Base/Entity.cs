@@ -5,7 +5,7 @@ namespace Moreno.ChessGame.Domain.Entities.Base;
 public abstract class Entity
 {
     public Guid Id { get; private set; }
-    public ValidationResult ValidationResult { get; private set; }
+    public ValidationResult ValidationResult { get; set; }
 
     protected Entity()
     {

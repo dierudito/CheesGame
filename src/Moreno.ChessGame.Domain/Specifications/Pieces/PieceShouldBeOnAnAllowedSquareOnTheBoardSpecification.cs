@@ -3,7 +3,7 @@ using Moreno.ChessGame.Domain.Entities.Base;
 using Moreno.ChessGame.Domain.Interfaces.Repositories;
 using Moreno.ChessGame.Domain.Value_Objects;
 
-namespace Moreno.ChessGame.Domain.Specifications.Pieces.Bishops;
+namespace Moreno.ChessGame.Domain.Specifications.Pieces;
 
 public class PieceShouldBeOnAnAllowedSquareOnTheBoardSpecification(IBoardRepository _boardRepository) :
     ISpecification<PieceEntity>
