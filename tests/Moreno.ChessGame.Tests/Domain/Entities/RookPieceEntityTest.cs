@@ -11,10 +11,10 @@ public class RookPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new RookPieceEntity(ColorEnum.White, new(BoardColumnEnum.A, BoardRowEnum.One));
+            new RookPiece(ColorEnum.White, new(BoardColumnEnum.A, BoardRowEnum.One));
 
         // Act
-        var response = RookPieceEntity.CreateWhiteRookOfQueen();
+        var response = RookPiece.CreateWhiteRookOfQueen();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -27,10 +27,10 @@ public class RookPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new RookPieceEntity(ColorEnum.White, new(BoardColumnEnum.H, BoardRowEnum.One));
+            new RookPiece(ColorEnum.White, new(BoardColumnEnum.H, BoardRowEnum.One));
 
         // Act
-        var response = RookPieceEntity.CreateWhiteRookOfKing();
+        var response = RookPiece.CreateWhiteRookOfKing();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -43,10 +43,10 @@ public class RookPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new RookPieceEntity(ColorEnum.Black, new(BoardColumnEnum.H, BoardRowEnum.Eight));
+            new RookPiece(ColorEnum.Black, new(BoardColumnEnum.H, BoardRowEnum.Eight));
 
         // Act
-        var response = RookPieceEntity.CreateBlackRookOfQueen();
+        var response = RookPiece.CreateBlackRookOfQueen();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -59,10 +59,10 @@ public class RookPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new RookPieceEntity(ColorEnum.Black, new(BoardColumnEnum.A, BoardRowEnum.Eight));
+            new RookPiece(ColorEnum.Black, new(BoardColumnEnum.A, BoardRowEnum.Eight));
 
         // Act
-        var response = RookPieceEntity.CreateBlackRookOfKing();
+        var response = RookPiece.CreateBlackRookOfKing();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -77,7 +77,7 @@ public class RookPieceEntityTest
         const int expectedCount = 4;
 
         // Act
-        var response = RookPieceEntity.CreateAllRooks();
+        var response = RookPiece.CreateAllRooks();
 
         // Assert
         response.Should().HaveCount(expectedCount);
@@ -102,7 +102,7 @@ public class RookPieceEntityTest
     {
         // Arrange
         var rook =
-            new RookPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new RookPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
@@ -136,7 +136,7 @@ public class RookPieceEntityTest
     {
         // Arrange
         var rook =
-            new RookPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new RookPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 

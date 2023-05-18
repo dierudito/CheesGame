@@ -1,18 +1,15 @@
 ﻿using DomainValidation.Interfaces.Specification;
-using Moreno.ChessGame.Domain.Entities.Base;
-using Moreno.ChessGame.Domain.Interfaces.Repositories;
-using Moreno.ChessGame.Domain.Value_Objects;
 
 namespace Moreno.ChessGame.Domain.Specifications.Pieces;
 
 public class PieceShouldBeOnAnAllowedSquareOnTheBoardSpecification(IBoardRepository _boardRepository) :
-    ISpecification<PieceEntity>
+    ISpecification<Piece>
 {
-    public async Task<bool> IsSatisfiedByAsync(PieceEntity piece)
+    public async Task<bool> IsSatisfiedByAsync(Piece piece)
     {
         var board = await _boardRepository.GetByIdAsync(piece.BoardId);
         var allPiecesOnTheBoard =
-            board.Pieces.Where(piece => !piece.WasCaptured && piece.Id != piece.Id);
+            board.Pieces.Where(boardPiece => !boardPiece.WasCaptured && boardPiece.Id != piece.Id).ToList();
 
         var wayTraveled = WayTraveled.GetWay(piece, piece.BoardEntity.Squares.ToList());
         var wayOfBishop =
@@ -27,9 +24,9 @@ public class PieceShouldBeOnAnAllowedSquareOnTheBoardSpecification(IBoardReposit
                 return false;
         }
 
-        return allPiecesOnTheBoard
-                    .Any(piece => piece.PieceAddressDto.Row == piece.PieceAddressDto.Row &&
-                                  piece.PieceAddressDto.Column == piece.PieceAddressDto.Column &&
-                                  piece.ColorEnum == piece.ColorEnum);
+        return !allPiecesOnTheBoard
+                    .Any(boardPiece => boardPiece.PieceAddressDto.Row == piece.PieceAddressDto.Row &&
+                                  boardPiece.PieceAddressDto.Column == piece.PieceAddressDto.Column &&
+                                  boardPiece.ColorEnum == piece.ColorEnum);
     }
 }

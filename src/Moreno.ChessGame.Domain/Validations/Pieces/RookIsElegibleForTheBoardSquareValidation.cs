@@ -6,12 +6,12 @@ using Moreno.ChessGame.Domain.Specifications.Pieces.Rooks;
 namespace Moreno.ChessGame.Domain.Validations.Pieces;
 
 public class RookIsElegibleForTheBoardSquareValidation :
-    Validator<RookPieceEntity>
+    Validator<RookPiece>
 {
     public RookIsElegibleForTheBoardSquareValidation(IBoardRepository boardRepository)
     {
         var rookInAllowedSquare = new RookShouldBeOnAnAllowedSquareOnTheBoardSpecification(boardRepository);
 
-        Add("rookInAllowedSquare", new Rule<RookPieceEntity>(rookInAllowedSquare, "Rook can't go to this square of the board"));
+        Add("rookInAllowedSquare", new Rule<RookPiece>(rookInAllowedSquare, "Rook can't go to this square of the board"));
     }
 }

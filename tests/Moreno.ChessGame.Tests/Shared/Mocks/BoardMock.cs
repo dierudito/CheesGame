@@ -5,9 +5,9 @@ namespace Moreno.ChessGame.UnitaryTests.Shared.Mocks;
 
 public static class BoardMock
 {
-    public static BoardEntity Create()
+    public static Board Create()
     {
-        var entity = new BoardEntity();
+        var entity = new Board();
         var squares = CreateSquares(entity.Id);
 
         foreach (var square in squares)
@@ -18,8 +18,8 @@ public static class BoardMock
         return entity;
     }
 
-    private static List<BoardSquareEntity> CreateSquares(Guid boardId) =>
-        new List<BoardSquareEntity>
+    private static List<BoardSquare> CreateSquares(Guid boardId) =>
+        new List<BoardSquare>
         {
             new(boardId, ColorEnum.Black, BoardColumnEnum.A, BoardRowEnum.One),
             new(boardId, ColorEnum.White, BoardColumnEnum.B, BoardRowEnum.One),

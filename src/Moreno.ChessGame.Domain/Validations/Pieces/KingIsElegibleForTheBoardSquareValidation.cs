@@ -6,12 +6,12 @@ using Moreno.ChessGame.Domain.Specifications.Pieces.Kings;
 namespace Moreno.ChessGame.Domain.Validations.Pieces;
 
 public class KingIsElegibleForTheBoardSquareValidation :
-    Validator<KingPieceEntity>
+    Validator<KingPiece>
 {
     public KingIsElegibleForTheBoardSquareValidation(IBoardRepository boardRepository)
     {
         var kingInAllowedSquare = new KingShouldBeOnAnAllowedSquareOnTheBoardSpecification(boardRepository);
 
-        Add("kingInAllowedSquare", new Rule<KingPieceEntity>(kingInAllowedSquare, "King can't go to this square of the board"));
+        Add("kingInAllowedSquare", new Rule<KingPiece>(kingInAllowedSquare, "King can't go to this square of the board"));
     }
 }

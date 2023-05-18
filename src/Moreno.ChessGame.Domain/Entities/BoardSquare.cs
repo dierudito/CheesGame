@@ -1,16 +1,13 @@
-﻿using Moreno.ChessGame.Domain.Entities.Base;
-using Moreno.ChessGame.Domain.Enums;
+﻿namespace Moreno.ChessGame.Domain.Entities;
 
-namespace Moreno.ChessGame.Domain.Entities;
-
-public class BoardSquareEntity : Entity
+public class BoardSquare : Entity
 {
     public Guid BoardId { get; private set; }
     public ColorEnum Color { get; private set; }
     public BoardColumnEnum Column { get; private set; }
     public BoardRowEnum Row { get; private set; }
 
-    public BoardSquareEntity(Guid boardId, ColorEnum color, BoardColumnEnum column, BoardRowEnum row)
+    public BoardSquare(Guid boardId, ColorEnum color, BoardColumnEnum column, BoardRowEnum row)
     {
         BoardId = boardId;
         Color = color;

@@ -1,25 +1,20 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities.Base;
-using Moreno.ChessGame.Domain.Enums;
-using Moreno.ChessGame.Domain.Value_Objects;
+﻿namespace Moreno.ChessGame.Domain.Entities.Pieces;
 
-namespace Moreno.ChessGame.Domain.Entities.Pieces;
-
-public class QueenPieceEntity : PieceEntity
+public class QueenPiece : Piece
 {
     private const PieceTypeEnum _pieceTypeEnum = PieceTypeEnum.Queen;
-    public QueenPieceEntity(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
+    public QueenPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
         base(_pieceTypeEnum, colorEnum, pieceAddressDto)
     {
     }
 
-    public static QueenPieceEntity CreateWhiteQueen() =>
+    public static QueenPiece CreateWhiteQueen() =>
         new(ColorEnum.White, new(BoardColumnEnum.D, BoardRowEnum.One));
 
-    public static QueenPieceEntity CreateBlackQueen() =>
+    public static QueenPiece CreateBlackQueen() =>
         new(ColorEnum.Black, new(BoardColumnEnum.E, BoardRowEnum.Eight));
 
-    public static IList<QueenPieceEntity> CreateAllQueens() => new List<QueenPieceEntity>
+    public static IList<QueenPiece> CreateAllQueens() => new List<QueenPiece>
     {
         CreateWhiteQueen(),
         CreateBlackQueen()

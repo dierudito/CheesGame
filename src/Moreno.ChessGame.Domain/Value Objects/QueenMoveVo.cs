@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.Domain.Value_Objects;
 
 public static class QueenMoveVo
 {
-    public static bool IsValid(PieceEntity pieceEntity, PieceAddressDto targetAddress)
+    public static bool IsValid(Piece pieceEntity, PieceAddressDto targetAddress)
     {
         var (eastDiagonalWay, westDiagonalWay, lineWay) =
             WaysPiece.GetWays(pieceEntity.PieceAddressDto, pieceEntity.BoardEntity.Squares.ToList());
@@ -38,7 +38,7 @@ file static class WaysPiece
         IList<PieceAddressDto> westDiagonal,
         IList<PieceAddressDto> line)
         GetWays(
-        PieceAddressDto pieceAddressDto, IList<BoardSquareEntity> boardSquares) =>
+        PieceAddressDto pieceAddressDto, IList<BoardSquare> boardSquares) =>
         (WaysPositions.GetEastDiagonal(pieceAddressDto, boardSquares),
          WaysPositions.GetWestDiagonal(pieceAddressDto, boardSquares),
          WaysPositions.GetLineWay(pieceAddressDto, boardSquares));

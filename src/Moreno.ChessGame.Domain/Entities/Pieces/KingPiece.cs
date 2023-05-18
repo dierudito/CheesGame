@@ -1,15 +1,10 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities.Base;
-using Moreno.ChessGame.Domain.Enums;
-using Moreno.ChessGame.Domain.Value_Objects;
+﻿namespace Moreno.ChessGame.Domain.Entities.Pieces;
 
-namespace Moreno.ChessGame.Domain.Entities.Pieces;
-
-public class KingPieceEntity : PieceEntity
+public class KingPiece : Piece
 {
     private const PieceTypeEnum _pieceTypeEnum = PieceTypeEnum.King;
     public bool IsKingInCheck { get; private set; }
-    public KingPieceEntity(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
+    public KingPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
         base(_pieceTypeEnum, colorEnum, pieceAddressDto)
     {
     }
@@ -19,13 +14,13 @@ public class KingPieceEntity : PieceEntity
         IsKingInCheck = isKingInCheck;
     }
 
-    public static KingPieceEntity CreateWhiteKing() =>
+    public static KingPiece CreateWhiteKing() =>
         new(ColorEnum.White, new(BoardColumnEnum.E, BoardRowEnum.One));
 
-    public static KingPieceEntity CreateBlackKing() =>
+    public static KingPiece CreateBlackKing() =>
         new(ColorEnum.Black, new(BoardColumnEnum.D, BoardRowEnum.Eight));
 
-    public static IList<KingPieceEntity> CreateAllKings() => new List<KingPieceEntity>
+    public static IList<KingPiece> CreateAllKings() => new List<KingPiece>
     {
         CreateWhiteKing(),
         CreateBlackKing()

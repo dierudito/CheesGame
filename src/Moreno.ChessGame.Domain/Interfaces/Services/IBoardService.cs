@@ -4,5 +4,5 @@ namespace Moreno.ChessGame.Domain.Interfaces.Services;
 
 public interface IBoardService
 {
-    Task<BoardEntity> CreateAsync(BoardEntity boardEntity);
+    Task<Board> CreateAsync(Board boardEntity);
 }

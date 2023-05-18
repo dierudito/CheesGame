@@ -1,5 +1,4 @@
-﻿using Moreno.ChessGame.Domain.Entities.Base;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 
 namespace Moreno.ChessGame.Domain.Interfaces.Repositories.Base;
 

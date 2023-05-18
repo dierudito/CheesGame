@@ -1,31 +1,29 @@
 ﻿using DomainValidation.Interfaces.Specification;
-using Moreno.ChessGame.Domain.Entities.Pieces;
-using Moreno.ChessGame.Domain.Interfaces.Repositories;
-using Moreno.ChessGame.Domain.Value_Objects;
 
 namespace Moreno.ChessGame.Domain.Specifications.Pieces.Pawns;
 
 public class PawnShouldBeOnAnAllowedSquareOnTheBoardSpecification(IBoardRepository _boardRepository) :
-    ISpecification<PawnPieceEntity>
+    ISpecification<PawnPiece>
 {
-    public async Task<bool> IsSatisfiedByAsync(PawnPieceEntity pawn)
+    public async Task<bool> IsSatisfiedByAsync(PawnPiece pawn)
     {
         var board = await _boardRepository.GetByIdAsync(pawn.BoardId);
         var allPiecesOnTheBoard =
-            board.Pieces.Where(piece => !piece.WasCaptured && piece.Id != piece.Id);
+            board.Pieces.Where(piece => !piece.WasCaptured && piece.Id != pawn.Id).ToList();
 
         var wayTraveled = WayTraveled.GetWay(pawn, pawn.BoardEntity.Squares.ToList());
-        var wayOfPawn =
-            wayTraveled.Where(way => way.Row != pawn.PieceAddressDto.Row &&
-                                                   way.Column != pawn.PieceAddressDto.Column)
-                       .ToList();
 
-        foreach (var way in wayOfPawn)
+        foreach (var way in wayTraveled)
         {
             if (allPiecesOnTheBoard.Any(piece => piece.PieceAddressDto.Row == way.Row &&
                                                  piece.PieceAddressDto.Column == way.Column))
                 return false;
         }
+
+        var wayOfPawn =
+            wayTraveled.Where(way => way.Row != pawn.PieceAddressDto.Row &&
+                                                   way.Column != pawn.PieceAddressDto.Column)
+                       .ToList();
 
         return !allPiecesOnTheBoard
                     .Any(piece => piece.PieceAddressDto.Row == pawn.PieceAddressDto.Row &&
@@ -35,7 +33,7 @@ public class PawnShouldBeOnAnAllowedSquareOnTheBoardSpecification(IBoardReposito
                                  ((piece.PieceAddressDto.Row + 1 == pawn.PieceAddressDto.Row &&
                                   piece.PieceAddressDto.Column + 1 == pawn.PieceAddressDto.Column) ||
                                   (piece.PieceAddressDto.Row - 1 == pawn.PieceAddressDto.Row &&
-                                  piece.PieceAddressDto.Column - 1 == pawn.PieceAddressDto.Column)) ||
+                                  piece.PieceAddressDto.Column - 1 == pawn.PieceAddressDto.Column) ||
                                   (piece.PieceAddressDto.Row + 1 == pawn.PieceAddressDto.Row &&
                                   piece.PieceAddressDto.Column - 1 == pawn.PieceAddressDto.Column) ||
                                   (piece.PieceAddressDto.Row - 1 == pawn.PieceAddressDto.Row &&

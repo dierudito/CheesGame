@@ -5,9 +5,9 @@ using Moreno.ChessGame.Domain.Interfaces.Repositories;
 namespace Moreno.ChessGame.Domain.Specifications.Pieces.Kings;
 
 public class KingShouldBeOnAnAllowedSquareOnTheBoardSpecification(IBoardRepository _boardRepository) :
-    ISpecification<KingPieceEntity>
+    ISpecification<KingPiece>
 {
-    public async Task<bool> IsSatisfiedByAsync(KingPieceEntity king) =>
+    public async Task<bool> IsSatisfiedByAsync(KingPiece king) =>
         await new PieceShouldBeOnAnAllowedSquareOnTheBoardSpecification(_boardRepository)
             .IsSatisfiedByAsync(king);
 }

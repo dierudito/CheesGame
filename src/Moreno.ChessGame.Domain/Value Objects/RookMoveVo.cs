@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.Domain.Value_Objects;
 
 public static class RookMoveVo
 {
-    public static bool IsValid(PieceEntity pieceEntity, PieceAddressDto targetAddress)
+    public static bool IsValid(Piece pieceEntity, PieceAddressDto targetAddress)
     {
         var waysPiece =
             WaysPiece.GetWays(pieceEntity.PieceAddressDto, pieceEntity.BoardEntity.Squares.ToList());
@@ -34,7 +34,7 @@ public static class RookMoveVo
 file static class WaysPiece
 {
     public static IList<PieceAddressDto> GetWays(
-        PieceAddressDto pieceAddressDto, IList<BoardSquareEntity> boardSquares) =>
+        PieceAddressDto pieceAddressDto, IList<BoardSquare> boardSquares) =>
         WaysPositions.GetLineWay(pieceAddressDto, boardSquares);
 
 }

@@ -11,10 +11,10 @@ public class PawnPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new PawnPieceEntity(ColorEnum.White, new(BoardColumnEnum.E, BoardRowEnum.Two));
+            new PawnPiece(ColorEnum.White, new(BoardColumnEnum.E, BoardRowEnum.Two));
 
         // Act
-        var response = PawnPieceEntity.CreateWhitePawn(new(BoardColumnEnum.E, BoardRowEnum.Two));
+        var response = PawnPiece.CreateWhitePawn(new(BoardColumnEnum.E, BoardRowEnum.Two));
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -27,10 +27,10 @@ public class PawnPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new PawnPieceEntity(ColorEnum.Black, new(BoardColumnEnum.E, BoardRowEnum.Seven));
+            new PawnPiece(ColorEnum.Black, new(BoardColumnEnum.E, BoardRowEnum.Seven));
 
         // Act
-        var response = PawnPieceEntity.CreateBlackPawn(new(BoardColumnEnum.E, BoardRowEnum.Seven));
+        var response = PawnPiece.CreateBlackPawn(new(BoardColumnEnum.E, BoardRowEnum.Seven));
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -45,7 +45,7 @@ public class PawnPieceEntityTest
         const int expectedCount = 16;
 
         // Act
-        var response = PawnPieceEntity.CreateAllPawns();
+        var response = PawnPiece.CreateAllPawns();
 
         // Assert
         response.Should().HaveCount(expectedCount);
@@ -63,7 +63,7 @@ public class PawnPieceEntityTest
     {
         // Arrange
         var pawn =
-            new PawnPieceEntity(colorEnum, new(columnSource, rowSource));
+            new PawnPiece(colorEnum, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
@@ -91,7 +91,7 @@ public class PawnPieceEntityTest
         var index = 1;
         if (colorEnum == ColorEnum.White) index = -1;
         var pawn =
-            new PawnPieceEntity(colorEnum, new(columnSource, (BoardRowEnum)((byte)rowSource + index)));
+            new PawnPiece(colorEnum, new(columnSource, (BoardRowEnum)((byte)rowSource + index)));
 
         var board = BoardMock.Create();
 
@@ -131,7 +131,7 @@ public class PawnPieceEntityTest
     {
         // Arrange
         var pawn =
-            new PawnPieceEntity(colorEnum, new(columnSource, rowSource));
+            new PawnPiece(colorEnum, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
@@ -158,7 +158,7 @@ public class PawnPieceEntityTest
     {
         // Arrange
         var pawn =
-            new PawnPieceEntity(colorEnum, new(columnSource, rowSource));
+            new PawnPiece(colorEnum, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
@@ -187,7 +187,7 @@ public class PawnPieceEntityTest
     {
         // Arrange
         var pawn =
-            new PawnPieceEntity(colorEnum, new(columnSource, rowSource));
+            new PawnPiece(colorEnum, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 

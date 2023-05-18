@@ -1,22 +1,15 @@
-﻿using Moreno.ChessGame.Domain.Entities.Pieces;
-using Moreno.ChessGame.Domain.Interfaces.Repositories;
-using Moreno.ChessGame.Domain.Interfaces.Repositories.Base;
-using Moreno.ChessGame.Domain.Interfaces.Services;
-using Moreno.ChessGame.Domain.Services.Base;
-using Moreno.ChessGame.Domain.Validations.Pieces;
+﻿namespace Moreno.ChessGame.Domain.Services;
 
-namespace Moreno.ChessGame.Domain.Services;
-
-public class QueenService(IBaseRepository<QueenPieceEntity> baseRepository,
+public class QueenService(IQueenRepository queenRepository,
     IBoardRepository boardRepository) :
-    BasePieceService<QueenPieceEntity>(baseRepository), IQueenService
+    BasePieceService<IBaseRepository<QueenPiece>, QueenPiece>(queenRepository), IQueenService
 {
-    public override async Task<QueenPieceEntity> MoveAsync(QueenPieceEntity QueenPieceEntity)
+    public override async Task<QueenPiece> MoveAsync(QueenPiece queenPiece)
     {
-        QueenPieceEntity.ValidationResult =
+        queenPiece.ValidationResult =
             await new QueenIsElegibleForTheBoardSquareValidation(boardRepository)
-            .ValidateAsync(QueenPieceEntity);
+            .ValidateAsync(queenPiece);
 
-        return await base.MoveAsync(QueenPieceEntity);
+        return await base.MoveAsync(queenPiece);
     }
 }

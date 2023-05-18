@@ -3,6 +3,6 @@ using Moreno.ChessGame.Domain.Interfaces.Services.Base;
 
 namespace Moreno.ChessGame.Domain.Interfaces.Services;
 
-public interface IKnightService : IBasePieceService<KnightPieceEntity>
+public interface IKnightService : IBasePieceService<KnightPiece>
 {
 }

@@ -1,9 +1,6 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Enums;
+﻿namespace Moreno.ChessGame.Domain.Entities.Base;
 
-namespace Moreno.ChessGame.Domain.Entities.Base;
-
-public abstract class PieceEntity : Entity
+public abstract class Piece : Entity
 {
     public PieceTypeEnum PieceTypeEnum { get; private set; }
     public ColorEnum ColorEnum { get; private set; }
@@ -12,10 +9,10 @@ public abstract class PieceEntity : Entity
     public PieceAddressDto LastPieceAddress { get; private set; }
     public bool HasMoved { get; private set; }
     public bool WasCaptured { get; private set; }
-    public virtual BoardEntity BoardEntity { get; private set; }
+    public virtual Board BoardEntity { get; private set; }
 
 
-    public PieceEntity(
+    public Piece(
         PieceTypeEnum pieceTypeEnum, ColorEnum colorEnum, PieceAddressDto pieceAddressDto)
     {
         PieceTypeEnum = pieceTypeEnum;
@@ -34,7 +31,7 @@ public abstract class PieceEntity : Entity
     {
         WasCaptured = true;
     }
-    public virtual void AddPieceOnTheBoard(Guid boardId, BoardEntity boardEntity)
+    public virtual void AddPieceOnTheBoard(Guid boardId, Board boardEntity)
     {
         BoardId = boardId;
         BoardEntity = boardEntity;

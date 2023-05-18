@@ -11,10 +11,10 @@ public class KnightPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new KnightPieceEntity(ColorEnum.White, new(BoardColumnEnum.B, BoardRowEnum.One));
+            new KnightPiece(ColorEnum.White, new(BoardColumnEnum.B, BoardRowEnum.One));
 
         // Act
-        var response = KnightPieceEntity.CreateWhiteKnightOfQueen();
+        var response = KnightPiece.CreateWhiteKnightOfQueen();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -26,10 +26,10 @@ public class KnightPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new KnightPieceEntity(ColorEnum.White, new(BoardColumnEnum.G, BoardRowEnum.One));
+            new KnightPiece(ColorEnum.White, new(BoardColumnEnum.G, BoardRowEnum.One));
 
         // Act
-        var response = KnightPieceEntity.CreateWhiteKnightOfKing();
+        var response = KnightPiece.CreateWhiteKnightOfKing();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -41,10 +41,10 @@ public class KnightPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new KnightPieceEntity(ColorEnum.Black, new(BoardColumnEnum.G, BoardRowEnum.Eight));
+            new KnightPiece(ColorEnum.Black, new(BoardColumnEnum.G, BoardRowEnum.Eight));
 
         // Act
-        var response = KnightPieceEntity.CreateBlackKnightOfQueen();
+        var response = KnightPiece.CreateBlackKnightOfQueen();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -56,10 +56,10 @@ public class KnightPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new KnightPieceEntity(ColorEnum.Black, new(BoardColumnEnum.B, BoardRowEnum.Eight));
+            new KnightPiece(ColorEnum.Black, new(BoardColumnEnum.B, BoardRowEnum.Eight));
 
         // Act
-        var response = KnightPieceEntity.CreateBlackKnightOfKing();
+        var response = KnightPiece.CreateBlackKnightOfKing();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -73,7 +73,7 @@ public class KnightPieceEntityTest
         const int expectedCount = 4;
 
         // Act
-        var response = KnightPieceEntity.CreateAllKnights();
+        var response = KnightPiece.CreateAllKnights();
 
         // Assert
         response.Should().HaveCount(expectedCount);
@@ -97,7 +97,7 @@ public class KnightPieceEntityTest
     {
         // Arrange
         var knight =
-            new KnightPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new KnightPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
@@ -125,7 +125,7 @@ public class KnightPieceEntityTest
     {
         // Arrange
         var knight =
-            new KnightPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new KnightPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 

@@ -11,10 +11,10 @@ public class KingPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new KingPieceEntity(ColorEnum.White, new(BoardColumnEnum.E, BoardRowEnum.One));
+            new KingPiece(ColorEnum.White, new(BoardColumnEnum.E, BoardRowEnum.One));
 
         // Act
-        var response = KingPieceEntity.CreateWhiteKing();
+        var response = KingPiece.CreateWhiteKing();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -27,10 +27,10 @@ public class KingPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new KingPieceEntity(ColorEnum.Black, new(BoardColumnEnum.D, BoardRowEnum.Eight));
+            new KingPiece(ColorEnum.Black, new(BoardColumnEnum.D, BoardRowEnum.Eight));
 
         // Act
-        var response = KingPieceEntity.CreateBlackKing();
+        var response = KingPiece.CreateBlackKing();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -45,7 +45,7 @@ public class KingPieceEntityTest
         const int expectedCount = 2;
 
         // Act
-        var response = KingPieceEntity.CreateAllKings();
+        var response = KingPiece.CreateAllKings();
 
         // Assert
         response.Should().HaveCount(expectedCount);
@@ -69,7 +69,7 @@ public class KingPieceEntityTest
     {
         // Arrange
         var king =
-            new KingPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new KingPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
@@ -100,7 +100,7 @@ public class KingPieceEntityTest
     {
         // Arrange
         var king =
-            new KingPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new KingPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
@@ -126,7 +126,7 @@ public class KingPieceEntityTest
     {
         // Arrange
         var king =
-            new KingPieceEntity(ColorEnum.White, new(columnSource, rowSource - 1));
+            new KingPiece(ColorEnum.White, new(columnSource, rowSource - 1));
 
         var board = BoardMock.Create();
 

@@ -1,12 +1,10 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities;
-using Moreno.ChessGame.Domain.Entities.Base;
+﻿using Moreno.ChessGame.Domain.Entities;
 
 namespace Moreno.ChessGame.Domain.Value_Objects;
 
 public class BishopMoveVo
 {
-    public static bool IsValid(PieceEntity pieceEntity, PieceAddressDto targetAddress)
+    public static bool IsValid(Piece pieceEntity, PieceAddressDto targetAddress)
     {
         var (eastWay, westWay) =
             WaysPiece.GetWays(pieceEntity.PieceAddressDto, pieceEntity.BoardEntity.Squares.ToList());
@@ -20,7 +18,7 @@ public class BishopMoveVo
 file static class WaysPiece
 {
     public static (IList<PieceAddressDto> east, IList<PieceAddressDto> west) GetWays(
-        PieceAddressDto pieceAddressDto, IList<BoardSquareEntity> boardSquares) =>
+        PieceAddressDto pieceAddressDto, IList<BoardSquare> boardSquares) =>
         (WaysPositions.GetEastDiagonal(pieceAddressDto, boardSquares),
          WaysPositions.GetWestDiagonal(pieceAddressDto, boardSquares));
 }

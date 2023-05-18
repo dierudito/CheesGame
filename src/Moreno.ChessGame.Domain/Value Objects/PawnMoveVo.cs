@@ -1,15 +1,12 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities;
-using Moreno.ChessGame.Domain.Entities.Base;
-using Moreno.ChessGame.Domain.Enums;
+﻿using Moreno.ChessGame.Domain.Entities;
 
 namespace Moreno.ChessGame.Domain.Value_Objects;
 
 public static class PawnMoveVo
 {
-    public static bool IsValid(PieceEntity pieceEntity, PieceAddressDto targetAddress)
+    public static bool IsValid(Piece pieceEntity, PieceAddressDto targetAddress)
     {
-        var waysPiece = 
+        var waysPiece =
             WaysPiece.GetWays(pieceEntity.PieceAddressDto, pieceEntity.BoardEntity.Squares.ToList());
 
         if (!waysPiece.Any(wp => wp.Row == targetAddress.Row && wp.Column == targetAddress.Column))
@@ -17,10 +14,10 @@ public static class PawnMoveVo
 
         return pieceEntity.ColorEnum switch
         {
-            ColorEnum.White => 
+            ColorEnum.White =>
             ToWhitePieces.IsValid(
                 waysPiece, pieceEntity.HasMoved, pieceEntity.PieceAddressDto, targetAddress),
-            ColorEnum.Black => 
+            ColorEnum.Black =>
             ToBlackPieces.IsValid(
                 waysPiece, pieceEntity.HasMoved, pieceEntity.PieceAddressDto, targetAddress),
             _ => false,
@@ -31,11 +28,11 @@ public static class PawnMoveVo
 file static class WaysPiece
 {
     public static IList<PieceAddressDto> GetWays(
-        PieceAddressDto pieceAddressDto, IList<BoardSquareEntity> boardSquares) =>
+        PieceAddressDto pieceAddressDto, IList<BoardSquare> boardSquares) =>
         boardSquares
         .Where(bs => bs.Column == pieceAddressDto.Column)
         .Select(bs => new PieceAddressDto(bs.Column, bs.Row)).ToList();
-    
+
 }
 
 file static class ToWhitePieces
@@ -44,7 +41,7 @@ file static class ToWhitePieces
         IList<PieceAddressDto> wayPiece, bool hasMoved, PieceAddressDto sourceAddress, PieceAddressDto targetAddress)
     {
         var possibleWays =
-            wayPiece.Where(wp => wp.Row == sourceAddress.Row+1 || 
+            wayPiece.Where(wp => wp.Row == sourceAddress.Row + 1 ||
                                 (!hasMoved && wp.Row == sourceAddress.Row + 2));
 
         return possibleWays.Any(pw => pw.Row == targetAddress.Row);

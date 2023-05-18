@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.Domain.Value_Objects;
 
 public static class PawnCaptureMoveVo
 {
-    public static bool IsValid(PieceEntity pieceEntity, PieceAddressDto targetAddress)
+    public static bool IsValid(Piece pieceEntity, PieceAddressDto targetAddress)
     {
         return pieceEntity.ColorEnum switch
         {

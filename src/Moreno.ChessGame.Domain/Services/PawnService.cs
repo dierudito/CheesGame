@@ -1,22 +1,15 @@
-﻿using Moreno.ChessGame.Domain.Entities.Pieces;
-using Moreno.ChessGame.Domain.Interfaces.Repositories;
-using Moreno.ChessGame.Domain.Interfaces.Repositories.Base;
-using Moreno.ChessGame.Domain.Interfaces.Services;
-using Moreno.ChessGame.Domain.Services.Base;
-using Moreno.ChessGame.Domain.Validations.Pieces;
+﻿namespace Moreno.ChessGame.Domain.Services;
 
-namespace Moreno.ChessGame.Domain.Services;
-
-public class PawnService(IBaseRepository<PawnPieceEntity> baseRepository,
+public class PawnService(IPawnRepository pawnRepository,
     IBoardRepository boardRepository) :
-    BasePieceService<PawnPieceEntity>(baseRepository), IPawnService
+    BasePieceService<IBaseRepository<PawnPiece>, PawnPiece>(pawnRepository), IPawnService
 {
-    public override async Task<PawnPieceEntity> MoveAsync(PawnPieceEntity PawnPieceEntity)
+    public override async Task<PawnPiece> MoveAsync(PawnPiece pawnPiece)
     {
-        PawnPieceEntity.ValidationResult =
+        pawnPiece.ValidationResult =
             await new PawnIsElegibleForTheBoardSquareValidation(boardRepository)
-            .ValidateAsync(PawnPieceEntity);
+            .ValidateAsync(pawnPiece);
 
-        return await base.MoveAsync(PawnPieceEntity);
+        return await base.MoveAsync(pawnPiece);
     }
 }

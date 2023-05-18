@@ -1,23 +1,20 @@
-﻿using FluentAssertions;
-using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities.Pieces;
-using Moreno.ChessGame.Domain.Enums;
+﻿using Moreno.ChessGame.Domain.Dtos;
 using Moreno.ChessGame.UnitaryTests.Shared.Mocks;
 
 namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 
 public class BishopPieceEntityTest
 {
-    [Fact (DisplayName = "Should create white Bishop of Queen")]
+    [Fact(DisplayName = "Should create white Bishop of Queen")]
     [Trait("Bishop Piece", "Domain")]
     public void ShouldCreateWhiteBishopOfQueen()
     {
         // Arrange
-        var expectedResponse = 
-            new BishopPieceEntity(ColorEnum.White, new(BoardColumnEnum.C, BoardRowEnum.One));
+        var expectedResponse =
+            new BishopPiece(ColorEnum.White, new(BoardColumnEnum.C, BoardRowEnum.One));
 
         // Act
-        var response = BishopPieceEntity.CreateWhiteBishopOfQueen();
+        var response = BishopPiece.CreateWhiteBishopOfQueen();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -29,10 +26,10 @@ public class BishopPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new BishopPieceEntity(ColorEnum.White, new(BoardColumnEnum.F, BoardRowEnum.One));
+            new BishopPiece(ColorEnum.White, new(BoardColumnEnum.F, BoardRowEnum.One));
 
         // Act
-        var response = BishopPieceEntity.CreateWhiteBishopOfKing();
+        var response = BishopPiece.CreateWhiteBishopOfKing();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -44,10 +41,10 @@ public class BishopPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new BishopPieceEntity(ColorEnum.Black, new(BoardColumnEnum.F, BoardRowEnum.Eight));
+            new BishopPiece(ColorEnum.Black, new(BoardColumnEnum.F, BoardRowEnum.Eight));
 
         // Act
-        var response = BishopPieceEntity.CreateBlackBishopOfQueen();
+        var response = BishopPiece.CreateBlackBishopOfQueen();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -59,10 +56,10 @@ public class BishopPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new BishopPieceEntity(ColorEnum.Black, new(BoardColumnEnum.C, BoardRowEnum.Eight));
+            new BishopPiece(ColorEnum.Black, new(BoardColumnEnum.C, BoardRowEnum.Eight));
 
         // Act
-        var response = BishopPieceEntity.CreateBlackBishopOfKing();
+        var response = BishopPiece.CreateBlackBishopOfKing();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -76,7 +73,7 @@ public class BishopPieceEntityTest
         const int expectedCount = 4;
 
         // Act
-        var response = BishopPieceEntity.CreateAllBishops();
+        var response = BishopPiece.CreateAllBishops();
 
         // Assert
         response.Should().HaveCount(expectedCount);
@@ -95,7 +92,7 @@ public class BishopPieceEntityTest
     {
         // Arrange
         var bishop =
-            new BishopPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new BishopPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
@@ -124,7 +121,7 @@ public class BishopPieceEntityTest
     {
         // Arrange
         var bishop =
-            new BishopPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new BishopPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 

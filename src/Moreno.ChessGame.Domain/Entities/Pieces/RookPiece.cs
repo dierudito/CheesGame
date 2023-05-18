@@ -1,31 +1,26 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities.Base;
-using Moreno.ChessGame.Domain.Enums;
-using Moreno.ChessGame.Domain.Value_Objects;
+﻿namespace Moreno.ChessGame.Domain.Entities.Pieces;
 
-namespace Moreno.ChessGame.Domain.Entities.Pieces;
-
-public class RookPieceEntity : PieceEntity
+public class RookPiece : Piece
 {
     private const PieceTypeEnum _pieceTypeEnum = PieceTypeEnum.Rook;
-    public RookPieceEntity(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
+    public RookPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
         base(_pieceTypeEnum, colorEnum, pieceAddressDto)
     {
     }
 
-    public static RookPieceEntity CreateWhiteRookOfQueen() =>
+    public static RookPiece CreateWhiteRookOfQueen() =>
         new(ColorEnum.White, new(BoardColumnEnum.A, BoardRowEnum.One));
 
-    public static RookPieceEntity CreateWhiteRookOfKing() =>
+    public static RookPiece CreateWhiteRookOfKing() =>
         new(ColorEnum.White, new(BoardColumnEnum.H, BoardRowEnum.One));
 
-    public static RookPieceEntity CreateBlackRookOfQueen() =>
+    public static RookPiece CreateBlackRookOfQueen() =>
         new(ColorEnum.Black, new(BoardColumnEnum.H, BoardRowEnum.Eight));
 
-    public static RookPieceEntity CreateBlackRookOfKing() =>
+    public static RookPiece CreateBlackRookOfKing() =>
         new(ColorEnum.Black, new(BoardColumnEnum.A, BoardRowEnum.Eight));
 
-    public static IList<RookPieceEntity> CreateAllRooks() => new List<RookPieceEntity>
+    public static IList<RookPiece> CreateAllRooks() => new List<RookPiece>
     {
         CreateWhiteRookOfQueen(),
         CreateWhiteRookOfKing(),

@@ -1,31 +1,26 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities.Base;
-using Moreno.ChessGame.Domain.Enums;
-using Moreno.ChessGame.Domain.Value_Objects;
+﻿namespace Moreno.ChessGame.Domain.Entities.Pieces;
 
-namespace Moreno.ChessGame.Domain.Entities.Pieces;
-
-public class BishopPieceEntity : PieceEntity
+public class BishopPiece : Piece
 {
     private const PieceTypeEnum _pieceTypeEnum = PieceTypeEnum.Bishop;
-    public BishopPieceEntity(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
+    public BishopPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
         base(_pieceTypeEnum, colorEnum, pieceAddressDto)
     {
     }
 
-    public static BishopPieceEntity CreateWhiteBishopOfQueen() =>
+    public static BishopPiece CreateWhiteBishopOfQueen() =>
         new(ColorEnum.White, new(BoardColumnEnum.C, BoardRowEnum.One));
 
-    public static BishopPieceEntity CreateWhiteBishopOfKing() =>
+    public static BishopPiece CreateWhiteBishopOfKing() =>
         new(ColorEnum.White, new(BoardColumnEnum.F, BoardRowEnum.One));
 
-    public static BishopPieceEntity CreateBlackBishopOfQueen() =>
+    public static BishopPiece CreateBlackBishopOfQueen() =>
         new(ColorEnum.Black, new(BoardColumnEnum.F, BoardRowEnum.Eight));
 
-    public static BishopPieceEntity CreateBlackBishopOfKing() =>
+    public static BishopPiece CreateBlackBishopOfKing() =>
         new(ColorEnum.Black, new(BoardColumnEnum.C, BoardRowEnum.Eight));
 
-    public static IList<BishopPieceEntity> CreateAllBishops() => new List<BishopPieceEntity>
+    public static IList<BishopPiece> CreateAllBishops() => new List<BishopPiece>
     {
         CreateWhiteBishopOfQueen(),
         CreateWhiteBishopOfKing(),

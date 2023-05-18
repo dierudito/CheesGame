@@ -1,22 +1,15 @@
-﻿using Moreno.ChessGame.Domain.Entities.Pieces;
-using Moreno.ChessGame.Domain.Interfaces.Repositories;
-using Moreno.ChessGame.Domain.Interfaces.Repositories.Base;
-using Moreno.ChessGame.Domain.Interfaces.Services;
-using Moreno.ChessGame.Domain.Services.Base;
-using Moreno.ChessGame.Domain.Validations.Pieces;
+﻿namespace Moreno.ChessGame.Domain.Services;
 
-namespace Moreno.ChessGame.Domain.Services;
-
-public class BishopService(IBaseRepository<BishopPieceEntity> baseRepository, 
+public class BishopService(IBishopRepository bishopRepository,
     IBoardRepository boardRepository) :
-    BasePieceService<BishopPieceEntity>(baseRepository), IBishopService
+    BasePieceService<IBaseRepository<BishopPiece>, BishopPiece>(bishopRepository), IBishopService
 {
-    public override async Task<BishopPieceEntity> MoveAsync(BishopPieceEntity BishopPieceEntity)
+    public override async Task<BishopPiece> MoveAsync(BishopPiece bishopPieceEntity)
     {
-        BishopPieceEntity.ValidationResult =
+        bishopPieceEntity.ValidationResult =
             await new BishopIsElegibleForTheBoardSquareValidation(boardRepository)
-            .ValidateAsync(BishopPieceEntity);
+            .ValidateAsync(bishopPieceEntity);
 
-        return await base.MoveAsync(BishopPieceEntity);
+        return await base.MoveAsync(bishopPieceEntity);
     }
 }

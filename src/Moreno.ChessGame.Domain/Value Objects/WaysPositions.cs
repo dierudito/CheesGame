@@ -1,18 +1,16 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities;
-using Moreno.ChessGame.Domain.Enums;
+﻿using Moreno.ChessGame.Domain.Entities;
 
 namespace Moreno.ChessGame.Domain.Value_Objects;
 
 public static class WaysPositions
 {
     public static IList<PieceAddressDto> GetLineWay(
-        PieceAddressDto pieceAddressDto, IList<BoardSquareEntity> boardSquares) =>
+        PieceAddressDto pieceAddressDto, IList<BoardSquare> boardSquares) =>
         boardSquares
         .Where(bs => bs.Column == pieceAddressDto.Column || bs.Row == pieceAddressDto.Row)
         .Select(bs => new PieceAddressDto(bs.Column, bs.Row)).ToList();
 
-    public static IList<PieceAddressDto> GetEastDiagonal(PieceAddressDto pieceAddressDto, IList<BoardSquareEntity> boardSquares)
+    public static IList<PieceAddressDto> GetEastDiagonal(PieceAddressDto pieceAddressDto, IList<BoardSquare> boardSquares)
     {
         var firstSquareOfTheBoard = boardSquares.FirstOrDefault();
         var isTheColumnTheVertexBounding = true;
@@ -55,7 +53,7 @@ public static class WaysPositions
 
         return eastDiagonal;
     }
-    public static IList<PieceAddressDto> GetWestDiagonal(PieceAddressDto pieceAddressDto, IList<BoardSquareEntity> boardSquares)
+    public static IList<PieceAddressDto> GetWestDiagonal(PieceAddressDto pieceAddressDto, IList<BoardSquare> boardSquares)
     {
         var firstSquareOfTheBoard = boardSquares.LastOrDefault();
         var isTheColumnTheVertexBounding = false;

@@ -11,10 +11,10 @@ public class QueenPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new QueenPieceEntity(ColorEnum.White, new(BoardColumnEnum.D, BoardRowEnum.One));
+            new QueenPiece(ColorEnum.White, new(BoardColumnEnum.D, BoardRowEnum.One));
 
         // Act
-        var response = QueenPieceEntity.CreateWhiteQueen();
+        var response = QueenPiece.CreateWhiteQueen();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -27,10 +27,10 @@ public class QueenPieceEntityTest
     {
         // Arrange
         var expectedResponse =
-            new QueenPieceEntity(ColorEnum.Black, new(BoardColumnEnum.E, BoardRowEnum.Eight));
+            new QueenPiece(ColorEnum.Black, new(BoardColumnEnum.E, BoardRowEnum.Eight));
 
         // Act
-        var response = QueenPieceEntity.CreateBlackQueen();
+        var response = QueenPiece.CreateBlackQueen();
 
         // Assert
         response.ColorEnum.Should().Be(expectedResponse.ColorEnum);
@@ -45,7 +45,7 @@ public class QueenPieceEntityTest
         const int expectedCount = 2;
 
         // Act
-        var response = QueenPieceEntity.CreateAllQueens();
+        var response = QueenPiece.CreateAllQueens();
 
         // Assert
         response.Should().HaveCount(expectedCount);
@@ -72,7 +72,7 @@ public class QueenPieceEntityTest
     {
         // Arrange
         var queen =
-            new QueenPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new QueenPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
@@ -105,7 +105,7 @@ public class QueenPieceEntityTest
     {
         // Arrange
         var queen =
-            new QueenPieceEntity(ColorEnum.White, new(columnSource, rowSource));
+            new QueenPiece(ColorEnum.White, new(columnSource, rowSource));
 
         var board = BoardMock.Create();
 
