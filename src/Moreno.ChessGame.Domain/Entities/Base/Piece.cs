@@ -6,7 +6,7 @@ public abstract class Piece : Entity
     public ColorEnum ColorEnum { get; private set; }
     public Guid BoardId { get; private set; }
     public PieceAddressDto PieceAddressDto { get; private set; }
-    public PieceAddressDto LastPieceAddress { get; private set; }
+    public PieceAddressDto? LastPieceAddress { get; private set; }
     public bool HasMoved { get; private set; }
     public bool WasCaptured { get; private set; }
     public virtual Board BoardEntity { get; private set; }

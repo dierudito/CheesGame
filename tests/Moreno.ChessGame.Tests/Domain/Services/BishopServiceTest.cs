@@ -23,7 +23,7 @@ public class BishopServiceTest
     [Theory(DisplayName = "Should move successfully")]
     [InlineData(BoardColumnEnum.A, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.H, BoardRowEnum.Six)]
-    [Trait("Bishop Piece", "Service")]
+    [Trait(nameof(BishopService), nameof(BishopService.MoveAsync))]
     public async Task ShouldMoveSuccessfully(BoardColumnEnum column, BoardRowEnum row)
     {
         // Arrange
@@ -46,7 +46,7 @@ public class BishopServiceTest
     [Theory(DisplayName = "Should move successfully when there's opponent's piece on target")]
     [InlineData(BoardColumnEnum.A, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.H, BoardRowEnum.Six)]
-    [Trait("Bishop Piece", "Service")]
+    [Trait(nameof(BishopService), nameof(BishopService.MoveAsync))]
     public async Task ShouldMoveSuccessfullyWhenThereIsOpponentsPieceOnTarget(BoardColumnEnum column, BoardRowEnum row)
     {
         // Arrange
@@ -70,7 +70,7 @@ public class BishopServiceTest
     }
 
     [Fact(DisplayName = "Shouldn't move when there are other pieces in the way")]
-    [Trait("Bishop Piece", "Service")]
+    [Trait(nameof(BishopService), nameof(BishopService.MoveAsync))]
     public async Task ShouldnotMoveWhenThereAreOtherPiecesInTheWay()
     {
         // Arrange
@@ -95,7 +95,7 @@ public class BishopServiceTest
     [Theory(DisplayName = "Shouldn't move successfully when there's own piece is on target")]
     [InlineData(BoardColumnEnum.A, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.H, BoardRowEnum.Six)]
-    [Trait("Bishop Piece", "Service")]
+    [Trait(nameof(BishopService), nameof(BishopService.MoveAsync))]
     public async Task ShouldnotMoveWhenThereIsOwnPieceIsOnTarget(BoardColumnEnum column, BoardRowEnum row)
     {
         // Arrange

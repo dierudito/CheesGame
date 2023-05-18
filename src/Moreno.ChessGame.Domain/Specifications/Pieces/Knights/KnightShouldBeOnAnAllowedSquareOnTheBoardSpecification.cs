@@ -1,6 +1,4 @@
 ﻿using DomainValidation.Interfaces.Specification;
-using Moreno.ChessGame.Domain.Entities.Base;
-using Moreno.ChessGame.Domain.Interfaces.Repositories;
 
 namespace Moreno.ChessGame.Domain.Specifications.Pieces.Knights;
 

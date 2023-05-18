@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 public class KingPieceEntityTest
 {
     [Fact(DisplayName = "Should create white King")]
-    [Trait("King Piece", "Domain")]
+    [Trait(nameof(KingPiece), nameof(KingPiece.CreateWhiteKing))]
     public void ShouldCreateWhiteKing()
     {
         // Arrange
@@ -22,7 +22,7 @@ public class KingPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create black King")]
-    [Trait("King Piece", "Domain")]
+    [Trait(nameof(KingPiece), nameof(KingPiece.CreateBlackKing))]
     public void ShouldCreateBlackKing()
     {
         // Arrange
@@ -38,7 +38,7 @@ public class KingPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create all Kings")]
-    [Trait("King Piece", "Domain")]
+    [Trait(nameof(KingPiece), nameof(KingPiece.CreateAllKings))]
     public void ShouldCreateAllKings()
     {
         // Arrange
@@ -62,7 +62,7 @@ public class KingPieceEntityTest
     [InlineData(BoardColumnEnum.E, BoardRowEnum.Five, BoardColumnEnum.F, BoardRowEnum.Four)]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.Five, BoardColumnEnum.E, BoardRowEnum.Four)]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.Five, BoardColumnEnum.D, BoardRowEnum.Four)]
-    [Trait("King Piece", "Domain")]
+    [Trait(nameof(KingPiece), nameof(KingPiece.MoveTo))]
     public void ShouldMoveToAnotherAddressSuccessfully(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -93,7 +93,7 @@ public class KingPieceEntityTest
     [InlineData(BoardColumnEnum.E, BoardRowEnum.One, BoardColumnEnum.G, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.One, BoardColumnEnum.B, BoardRowEnum.One)]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.One, BoardColumnEnum.H, BoardRowEnum.One)]
-    [Trait("King Piece", "Domain")]
+    [Trait(nameof(KingPiece), nameof(KingPiece.MoveTo))]
     public void ShouldnotMoveToWrongAddress(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -119,7 +119,7 @@ public class KingPieceEntityTest
     [Theory(DisplayName = "Shouldn't move to wrong address when already moved")]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.One, BoardColumnEnum.B, BoardRowEnum.One)]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.One, BoardColumnEnum.G, BoardRowEnum.One)]
-    [Trait("King Piece", "Domain")]
+    [Trait(nameof(KingPiece), nameof(KingPiece.MoveTo))]
     public void ShouldnotMoveToWrongAddressWhenAlreadyMoved(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)

@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 public class BishopPieceEntityTest
 {
     [Fact(DisplayName = "Should create white Bishop of Queen")]
-    [Trait("Bishop Piece", "Domain")]
+    [Trait(nameof(BishopPiece), nameof(BishopPiece.CreateWhiteBishopOfQueen))]
     public void ShouldCreateWhiteBishopOfQueen()
     {
         // Arrange
@@ -21,7 +21,7 @@ public class BishopPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create white Bishop of King")]
-    [Trait("Bishop Piece", "Domain")]
+    [Trait(nameof(BishopPiece), nameof(BishopPiece.CreateWhiteBishopOfKing))]
     public void ShouldCreateWhiteBishopOfKing()
     {
         // Arrange
@@ -36,7 +36,7 @@ public class BishopPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create black Bishop of Queen")]
-    [Trait("Bishop Piece", "Domain")]
+    [Trait(nameof(BishopPiece), nameof(BishopPiece.CreateBlackBishopOfQueen))]
     public void ShouldCreateBlackBishopOfQueen()
     {
         // Arrange
@@ -51,7 +51,7 @@ public class BishopPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create black Bishop of King")]
-    [Trait("Bishop Piece", "Domain")]
+    [Trait(nameof(BishopPiece), nameof(BishopPiece.CreateBlackBishopOfKing))]
     public void ShouldCreateBlackBishopOfKing()
     {
         // Arrange
@@ -66,7 +66,7 @@ public class BishopPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create all Bishops")]
-    [Trait("Bishop Piece", "Domain")]
+    [Trait(nameof(BishopPiece), nameof(BishopPiece.CreateAllBishops))]
     public void ShouldCreateAllBishops()
     {
         // Arrange
@@ -85,7 +85,7 @@ public class BishopPieceEntityTest
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Five, BoardColumnEnum.H, BoardRowEnum.One)]
     [InlineData(BoardColumnEnum.A, BoardRowEnum.Two, BoardColumnEnum.G, BoardRowEnum.Eight)]
     [InlineData(BoardColumnEnum.G, BoardRowEnum.Eight, BoardColumnEnum.A, BoardRowEnum.Two)]
-    [Trait("Bishop Piece", "Domain")]
+    [Trait(nameof(BishopPiece), nameof(BishopPiece.MoveTo))]
     public void ShouldMoveToAnotherAddressSuccessfully(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -114,7 +114,7 @@ public class BishopPieceEntityTest
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Five, BoardColumnEnum.H, BoardRowEnum.Two)]
     [InlineData(BoardColumnEnum.A, BoardRowEnum.Two, BoardColumnEnum.G, BoardRowEnum.Seven)]
     [InlineData(BoardColumnEnum.G, BoardRowEnum.Eight, BoardColumnEnum.A, BoardRowEnum.Three)]
-    [Trait("Bishop Piece", "Domain")]
+    [Trait(nameof(BishopPiece), nameof(BishopPiece.MoveTo))]
     public void ShouldnotMoveToWrongAddress(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)

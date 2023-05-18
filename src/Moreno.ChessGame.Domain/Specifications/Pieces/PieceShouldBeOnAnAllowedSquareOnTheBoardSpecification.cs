@@ -12,12 +12,12 @@ public class PieceShouldBeOnAnAllowedSquareOnTheBoardSpecification(IBoardReposit
             board.Pieces.Where(boardPiece => !boardPiece.WasCaptured && boardPiece.Id != piece.Id).ToList();
 
         var wayTraveled = WayTraveled.GetWay(piece, piece.BoardEntity.Squares.ToList());
-        var wayOfBishop =
+        var wayOfPiece =
             wayTraveled.Where(way => way.Row != piece.PieceAddressDto.Row &&
                                                    way.Column != piece.PieceAddressDto.Column)
                        .ToList();
 
-        foreach (var way in wayOfBishop)
+        foreach (var way in wayOfPiece)
         {
             if (allPiecesOnTheBoard.Any(piece => piece.PieceAddressDto.Row == way.Row &&
                                                  piece.PieceAddressDto.Column == way.Column))

@@ -23,7 +23,7 @@ public class PawnServiceTest
     [Theory(DisplayName = "Should move white pawn successfully")]
     [InlineData(BoardColumnEnum.B, BoardRowEnum.Two, BoardColumnEnum.B, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.B, BoardRowEnum.Two, BoardColumnEnum.B, BoardRowEnum.Four)]
-    [Trait("Pawn Piece", "Service")]
+    [Trait(nameof(PawnService), nameof(PawnService.MoveAsync))]
     public async Task ShouldMoveWhitePawnSuccessfully(BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
     {
@@ -47,7 +47,7 @@ public class PawnServiceTest
     [Theory(DisplayName = "Should move black pawn successfully")]
     [InlineData(BoardColumnEnum.B, BoardRowEnum.Seven, BoardColumnEnum.B, BoardRowEnum.Six)]
     [InlineData(BoardColumnEnum.B, BoardRowEnum.Seven, BoardColumnEnum.B, BoardRowEnum.Five)]
-    [Trait("Pawn Piece", "Service")]
+    [Trait(nameof(PawnService), nameof(PawnService.MoveAsync))]
     public async Task ShouldMoveBlackPawnSuccessfully(BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
     {
@@ -71,7 +71,7 @@ public class PawnServiceTest
     [Theory(DisplayName = "Shouldn't move white pawn to an occupied square")]
     [InlineData(BoardColumnEnum.B, BoardRowEnum.Two, BoardColumnEnum.B, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.B, BoardRowEnum.Two, BoardColumnEnum.B, BoardRowEnum.Four)]
-    [Trait("Pawn Piece", "Service")]
+    [Trait(nameof(PawnService), nameof(PawnService.MoveAsync))]
     public async Task ShouldnotMoveWhitePawnToAnOccupiedSquare(BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
     {
@@ -98,7 +98,7 @@ public class PawnServiceTest
     [Theory(DisplayName = "Shouldn't move black pawn to an occupied square")]
     [InlineData(BoardColumnEnum.B, BoardRowEnum.Seven, BoardColumnEnum.B, BoardRowEnum.Six)]
     [InlineData(BoardColumnEnum.B, BoardRowEnum.Seven, BoardColumnEnum.B, BoardRowEnum.Five)]
-    [Trait("Pawn Piece", "Service")]
+    [Trait(nameof(PawnService), nameof(PawnService.MoveAsync))]
     public async Task ShouldnotMoveBlackPawnToAnOccupiedSquare(BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
     {

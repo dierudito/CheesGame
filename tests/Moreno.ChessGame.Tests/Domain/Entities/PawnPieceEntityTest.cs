@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 public class PawnPieceEntityTest
 {
     [Fact(DisplayName = "Should create white Pawn")]
-    [Trait("Pawn Piece", "Domain")]
+    [Trait(nameof(PawnPiece), nameof(PawnPiece.CreateWhitePawn))]
     public void ShouldCreateWhitePawn()
     {
         // Arrange
@@ -22,7 +22,7 @@ public class PawnPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create black Pawn")]
-    [Trait("Pawn Piece", "Domain")]
+    [Trait(nameof(PawnPiece), nameof(PawnPiece.CreateBlackPawn))]
     public void ShouldCreateBlackPawn()
     {
         // Arrange
@@ -38,7 +38,7 @@ public class PawnPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create all Pawns")]
-    [Trait("Pawn Piece", "Domain")]
+    [Trait(nameof(PawnPiece), nameof(PawnPiece.CreateAllPawns))]
     public void ShouldCreateAllPawns()
     {
         // Arrange
@@ -56,7 +56,7 @@ public class PawnPieceEntityTest
     [InlineData(ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Two, BoardColumnEnum.E, BoardRowEnum.Four)]
     [InlineData(ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Seven, BoardColumnEnum.E, BoardRowEnum.Six)]
     [InlineData(ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Seven, BoardColumnEnum.E, BoardRowEnum.Five)]
-    [Trait("Pawn Piece", "Domain")]
+    [Trait(nameof(PawnPiece), nameof(PawnPiece.MoveTo))]
     public void ShouldMoveToAnotherAddressSuccessfully(ColorEnum colorEnum,
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -82,7 +82,7 @@ public class PawnPieceEntityTest
     [Theory(DisplayName = "Shouldn't move two squares when it has already moved once.")]
     [InlineData(ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Three, BoardColumnEnum.E, BoardRowEnum.Five)]
     [InlineData(ColorEnum.Black, BoardColumnEnum.D, BoardRowEnum.Six, BoardColumnEnum.D, BoardRowEnum.Four)]
-    [Trait("Pawn Piece", "Domain")]
+    [Trait(nameof(PawnPiece), nameof(PawnPiece.MoveTo))]
     public void ShouldMoveTwoSquaresWhenItHasAlreadyMovedOnce(ColorEnum colorEnum,
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -124,7 +124,7 @@ public class PawnPieceEntityTest
     [InlineData(ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Seven, BoardColumnEnum.F, BoardRowEnum.Eight)]
     [InlineData(ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Seven, BoardColumnEnum.D, BoardRowEnum.Six)]
     [InlineData(ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Seven, BoardColumnEnum.F, BoardRowEnum.Six)]
-    [Trait("Pawn Piece", "Domain")]
+    [Trait(nameof(PawnPiece), nameof(PawnPiece.MoveTo))]
     public void ShouldnotMoveToWrongAddress(ColorEnum colorEnum,
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -151,7 +151,7 @@ public class PawnPieceEntityTest
     [InlineData(ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Two, BoardColumnEnum.F, BoardRowEnum.Three)]
     [InlineData(ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Seven, BoardColumnEnum.D, BoardRowEnum.Six)]
     [InlineData(ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Seven, BoardColumnEnum.F, BoardRowEnum.Six)]
-    [Trait("Pawn Piece", "Domain")]
+    [Trait(nameof(PawnPiece), nameof(PawnPiece.MoveTo))]
     public void ShouldMovingToCaptureSuccessfully(ColorEnum colorEnum,
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -180,7 +180,7 @@ public class PawnPieceEntityTest
     [InlineData(ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Two, BoardColumnEnum.E, BoardRowEnum.Four)]
     [InlineData(ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Seven, BoardColumnEnum.E, BoardRowEnum.Six)]
     [InlineData(ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Seven, BoardColumnEnum.E, BoardRowEnum.Five)]
-    [Trait("Pawn Piece", "Domain")]
+    [Trait(nameof(PawnPiece), nameof(PawnPiece.MoveTo))]
     public void ShouldnotMovingToCaptureToWrongAddress(ColorEnum colorEnum,
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)

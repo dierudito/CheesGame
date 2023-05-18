@@ -4,14 +4,21 @@ public class KingPiece : Piece
 {
     private const PieceTypeEnum _pieceTypeEnum = PieceTypeEnum.King;
     public bool IsKingInCheck { get; private set; }
+    public bool HasTheKingBeenCheck { get; private set; }
     public KingPiece(ColorEnum colorEnum, PieceAddressDto pieceAddressDto) :
         base(_pieceTypeEnum, colorEnum, pieceAddressDto)
     {
     }
 
-    public void SetIsKingInCheck(bool isKingInCheck)
+    public void PutTheKingInCheck()
     {
-        IsKingInCheck = isKingInCheck;
+        IsKingInCheck = true;
+        HasTheKingBeenCheck = true;
+    }
+
+    public void RemoveTheCheckKing()
+    {
+        IsKingInCheck = false;
     }
 
     public static KingPiece CreateWhiteKing() =>

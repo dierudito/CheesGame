@@ -1,8 +1,8 @@
 ﻿namespace Moreno.ChessGame.Domain.Services;
 
-public class KingService(IKingRepository baseRepository,
+public class KingService(IKingRepository kingRepository,
     IBoardRepository boardRepository) :
-    BasePieceService<IBaseRepository<KingPiece>, KingPiece>(baseRepository), IKingService
+    BasePieceService<IBaseRepository<KingPiece>, KingPiece>(kingRepository), IKingService
 {
     public override async Task<KingPiece> MoveAsync(KingPiece KingPieceEntity)
     {

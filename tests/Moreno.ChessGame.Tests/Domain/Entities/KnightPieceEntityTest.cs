@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 public class KnightPieceEntityTest
 {
     [Fact(DisplayName = "Should create white Knight of Queen")]
-    [Trait("Knight Piece", "Domain")]
+    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateWhiteKnightOfQueen))]
     public void ShouldCreateWhiteKnightOfQueen()
     {
         // Arrange
@@ -21,7 +21,7 @@ public class KnightPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create white Knight of King")]
-    [Trait("Knight Piece", "Domain")]
+    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateWhiteKnightOfKing))]
     public void ShouldCreateWhiteKnightOfKing()
     {
         // Arrange
@@ -36,7 +36,7 @@ public class KnightPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create black Knight of Queen")]
-    [Trait("Knight Piece", "Domain")]
+    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateBlackKnightOfQueen))]
     public void ShouldCreateBlackKnightOfQueen()
     {
         // Arrange
@@ -51,7 +51,7 @@ public class KnightPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create black Knight of King")]
-    [Trait("Knight Piece", "Domain")]
+    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateBlackKnightOfKing))]
     public void ShouldCreateBlackKnightOfKing()
     {
         // Arrange
@@ -66,7 +66,7 @@ public class KnightPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create all Knights")]
-    [Trait("Knight Piece", "Domain")]
+    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateAllKnights))]
     public void ShouldCreateAllKnights()
     {
         // Arrange
@@ -90,7 +90,7 @@ public class KnightPieceEntityTest
     [InlineData(BoardColumnEnum.E, BoardRowEnum.Five, BoardColumnEnum.G, BoardRowEnum.Four)]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.Five, BoardColumnEnum.D, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.Five, BoardColumnEnum.F, BoardRowEnum.Three)]
-    [Trait("Knight Piece", "Domain")]
+    [Trait(nameof(KnightPiece), nameof(KnightPiece.MoveTo))]
     public void ShouldMoveToAnotherAddressSuccessfully(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -118,7 +118,7 @@ public class KnightPieceEntityTest
     [InlineData(BoardColumnEnum.B, BoardRowEnum.One, BoardColumnEnum.B, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.Five, BoardColumnEnum.D, BoardRowEnum.Eight)]
     [InlineData(BoardColumnEnum.E, BoardRowEnum.Five, BoardColumnEnum.F, BoardRowEnum.Eight)]
-    [Trait("Knight Piece", "Domain")]
+    [Trait(nameof(KnightPiece), nameof(KnightPiece.MoveTo))]
     public void ShouldnotMoveToWrongAddress(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)

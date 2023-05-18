@@ -1,6 +1,4 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities;
-using Moreno.ChessGame.Domain.Entities.Base;
+﻿using Moreno.ChessGame.Domain.Entities;
 
 namespace Moreno.ChessGame.Domain.Value_Objects;
 
