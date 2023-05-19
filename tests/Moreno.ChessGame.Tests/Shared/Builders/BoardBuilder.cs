@@ -12,77 +12,112 @@ public class BoardBuilder
     public BoardBuilder()
     {
         _board = new();
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.A, BoardRowEnum.One), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.B, BoardRowEnum.One), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.C, BoardRowEnum.One), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.D, BoardRowEnum.One), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.One), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.F, BoardRowEnum.One), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.G, BoardRowEnum.One), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.H, BoardRowEnum.One), false);
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.A, BoardRowEnum.One));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.B, BoardRowEnum.One));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.C, BoardRowEnum.One));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.D, BoardRowEnum.One));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.One));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.F, BoardRowEnum.One));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.G, BoardRowEnum.One));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.H, BoardRowEnum.One));
 
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.A, BoardRowEnum.Two), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.B, BoardRowEnum.Two), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.C, BoardRowEnum.Two), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.D, BoardRowEnum.Two), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Two), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.F, BoardRowEnum.Two), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.G, BoardRowEnum.Two), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.H, BoardRowEnum.Two), false);
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.A, BoardRowEnum.Two));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.B, BoardRowEnum.Two));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.C, BoardRowEnum.Two));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.D, BoardRowEnum.Two));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Two));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.F, BoardRowEnum.Two));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.G, BoardRowEnum.Two));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.H, BoardRowEnum.Two));
 
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.A, BoardRowEnum.Three), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.B, BoardRowEnum.Three), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.C, BoardRowEnum.Three), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.D, BoardRowEnum.Three), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Three), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.F, BoardRowEnum.Three), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.G, BoardRowEnum.Three), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.H, BoardRowEnum.Three), false);
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.A, BoardRowEnum.Three));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.B, BoardRowEnum.Three));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.C, BoardRowEnum.Three));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.D, BoardRowEnum.Three));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Three));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.F, BoardRowEnum.Three));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.G, BoardRowEnum.Three));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.H, BoardRowEnum.Three));
 
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.A, BoardRowEnum.Four), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.B, BoardRowEnum.Four), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.C, BoardRowEnum.Four), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.D, BoardRowEnum.Four), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Four), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.F, BoardRowEnum.Four), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.G, BoardRowEnum.Four), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.H, BoardRowEnum.Four), false);
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.A, BoardRowEnum.Four));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.B, BoardRowEnum.Four));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.C, BoardRowEnum.Four));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.D, BoardRowEnum.Four));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Four));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.F, BoardRowEnum.Four));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.G, BoardRowEnum.Four));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.H, BoardRowEnum.Four));
 
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.A, BoardRowEnum.Five), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.B, BoardRowEnum.Five), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.C, BoardRowEnum.Five), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.D, BoardRowEnum.Five), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Five), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.F, BoardRowEnum.Five), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.G, BoardRowEnum.Five), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.H, BoardRowEnum.Five), false);
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.A, BoardRowEnum.Five));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.B, BoardRowEnum.Five));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.C, BoardRowEnum.Five));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.D, BoardRowEnum.Five));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Five));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.F, BoardRowEnum.Five));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.G, BoardRowEnum.Five));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.H, BoardRowEnum.Five));
 
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.A, BoardRowEnum.Six), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.B, BoardRowEnum.Six), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.C, BoardRowEnum.Six), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.D, BoardRowEnum.Six), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Six), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.F, BoardRowEnum.Six), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.G, BoardRowEnum.Six), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.H, BoardRowEnum.Six), false);
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.A, BoardRowEnum.Six));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.B, BoardRowEnum.Six));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.C, BoardRowEnum.Six));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.D, BoardRowEnum.Six));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Six));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.F, BoardRowEnum.Six));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.G, BoardRowEnum.Six));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.H, BoardRowEnum.Six));
 
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.A, BoardRowEnum.Seven), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.B, BoardRowEnum.Seven), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.C, BoardRowEnum.Seven), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.D, BoardRowEnum.Seven), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Seven), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.F, BoardRowEnum.Seven), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.G, BoardRowEnum.Seven), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.H, BoardRowEnum.Seven), false);
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.A, BoardRowEnum.Seven));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.B, BoardRowEnum.Seven));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.C, BoardRowEnum.Seven));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.D, BoardRowEnum.Seven));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.E, BoardRowEnum.Seven));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.F, BoardRowEnum.Seven));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.G, BoardRowEnum.Seven));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.H, BoardRowEnum.Seven));
 
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.A, BoardRowEnum.Eight), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.B, BoardRowEnum.Eight), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.C, BoardRowEnum.Eight), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.D, BoardRowEnum.Eight), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Eight), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.F, BoardRowEnum.Eight), false);
-        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.G, BoardRowEnum.Eight), false);
-        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.H, BoardRowEnum.Eight), false);
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.A, BoardRowEnum.Eight));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.B, BoardRowEnum.Eight));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.C, BoardRowEnum.Eight));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.D, BoardRowEnum.Eight));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.E, BoardRowEnum.Eight));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.F, BoardRowEnum.Eight));
+        WithSquare(new(_board.Id, ColorEnum.White, BoardColumnEnum.G, BoardRowEnum.Eight));
+        WithSquare(new(_board.Id, ColorEnum.Black, BoardColumnEnum.H, BoardRowEnum.Eight));
+    }
+
+    public BoardBuilder WithPiece(Piece piece, bool overlap = false)
+    {
+        if (overlap || Pieces == null) Pieces = new List<Piece>();
+        Pieces.Add(piece);
+        return this;
+    }
+
+    public BoardBuilder WithSquare(BoardSquare square, bool overlap = false)
+    {
+        if (overlap || Squares == null) Squares = new List<BoardSquare>();
+        Squares.Add(square);
+        return this;
+    }
+
+    public static BoardBuilder New() => new();
+
+    public Board Build()
+    {
+        foreach (var square in Squares)
+        {
+            _board.AddSquare(square);
+        }
+
+        foreach (var piece in Pieces)
+        {
+            _board.AddPiece(piece);
+        }
+
+        return _board;
+    }
+
+    public BoardBuilder WithAllTheChessPieces()
+    {
 
         var whiteRookOfQueen = RookPiece.CreateWhiteRookOfQueen();
         var whiteKnightOfQueen = KnightPiece.CreateWhiteKnightOfQueen();
@@ -101,37 +136,37 @@ public class BoardBuilder
         var blackRookOfKing = RookPiece.CreateBlackRookOfKing();
         var blackKnightOfKing = KnightPiece.CreateBlackKnightOfKing();
         var blackBishopOfKing = BishopPiece.CreateBlackBishopOfKing();
-        var whitePawnA = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White && 
+        var whitePawnA = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.A);
-        var whitePawnB = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White && 
+        var whitePawnB = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.B);
-        var whitePawnC = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White && 
+        var whitePawnC = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.C);
-        var whitePawnD = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White && 
+        var whitePawnD = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.D);
-        var whitePawnE = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White && 
+        var whitePawnE = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.E);
-        var whitePawnF = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White && 
+        var whitePawnF = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.F);
-        var whitePawnG = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White && 
+        var whitePawnG = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.G);
-        var whitePawnH = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White && 
+        var whitePawnH = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.White &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.H);
-        var blackPawnA = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black && 
+        var blackPawnA = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.A);
-        var blackPawnB = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black && 
+        var blackPawnB = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.B);
-        var blackPawnC = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black && 
+        var blackPawnC = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.C);
-        var blackPawnD = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black && 
+        var blackPawnD = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.D);
-        var blackPawnE = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black && 
+        var blackPawnE = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.E);
-        var blackPawnF = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black && 
+        var blackPawnF = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.F);
-        var blackPawnG = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black && 
+        var blackPawnG = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.G);
-        var blackPawnH = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black && 
+        var blackPawnH = allPawns.FirstOrDefault(pawn => pawn.ColorEnum == ColorEnum.Black &&
                                                  pawn.PieceAddressDto.Column == BoardColumnEnum.H);
 
 
@@ -168,68 +203,39 @@ public class BoardBuilder
         blackPawnG?.AddPieceOnTheBoard(_board.Id, _board);
         blackPawnH?.AddPieceOnTheBoard(_board.Id, _board);
 
-        WithPiece(whiteRookOfQueen, false);
-        WithPiece(whiteKnightOfQueen, false);
-        WithPiece(whiteBishopOfQueen, false);
-        WithPiece(whiteQueen, false);
-        WithPiece(whiteKing, false);
-        WithPiece(whiteRookOfKing, false);
-        WithPiece(whiteKnightOfKing, false);
-        WithPiece(whiteBishopOfKing, false);
-        WithPiece(blackRookOfQueen, false);
-        WithPiece(blackKnightOfQueen, false);
-        WithPiece(blackBishopOfQueen, false);
-        WithPiece(blackQueen, false);
-        WithPiece(blackKing, false);
-        WithPiece(blackRookOfKing, false);
-        WithPiece(blackKnightOfKing, false);
-        WithPiece(blackBishopOfKing, false);
-        if (whitePawnA is not null) WithPiece(whitePawnA, false);
-        if (whitePawnB is not null) WithPiece(whitePawnB, false);
-        if (whitePawnC is not null) WithPiece(whitePawnC, false);
-        if (whitePawnD is not null) WithPiece(whitePawnD, false);
-        if (whitePawnE is not null) WithPiece(whitePawnE, false);
-        if (whitePawnF is not null) WithPiece(whitePawnF, false);
-        if (whitePawnG is not null) WithPiece(whitePawnG, false);
-        if (whitePawnH is not null) WithPiece(whitePawnH, false);
-        if (blackPawnA is not null) WithPiece(blackPawnA, false);
-        if (blackPawnB is not null) WithPiece(blackPawnB, false);
-        if (blackPawnC is not null) WithPiece(blackPawnC, false);
-        if (blackPawnD is not null) WithPiece(blackPawnD, false);
-        if (blackPawnE is not null) WithPiece(blackPawnE, false);
-        if (blackPawnF is not null) WithPiece(blackPawnF, false);
-        if (blackPawnG is not null) WithPiece(blackPawnG, false);
-        if (blackPawnH is not null) WithPiece(blackPawnH, false);
-    }
+        WithPiece(whiteRookOfQueen);
+        WithPiece(whiteKnightOfQueen);
+        WithPiece(whiteBishopOfQueen);
+        WithPiece(whiteQueen);
+        WithPiece(whiteKing);
+        WithPiece(whiteRookOfKing);
+        WithPiece(whiteKnightOfKing);
+        WithPiece(whiteBishopOfKing);
+        WithPiece(blackRookOfQueen);
+        WithPiece(blackKnightOfQueen);
+        WithPiece(blackBishopOfQueen);
+        WithPiece(blackQueen);
+        WithPiece(blackKing);
+        WithPiece(blackRookOfKing);
+        WithPiece(blackKnightOfKing);
+        WithPiece(blackBishopOfKing);
+        if (whitePawnA is not null) WithPiece(whitePawnA);
+        if (whitePawnB is not null) WithPiece(whitePawnB);
+        if (whitePawnC is not null) WithPiece(whitePawnC);
+        if (whitePawnD is not null) WithPiece(whitePawnD);
+        if (whitePawnE is not null) WithPiece(whitePawnE);
+        if (whitePawnF is not null) WithPiece(whitePawnF);
+        if (whitePawnG is not null) WithPiece(whitePawnG);
+        if (whitePawnH is not null) WithPiece(whitePawnH);
+        if (blackPawnA is not null) WithPiece(blackPawnA);
+        if (blackPawnB is not null) WithPiece(blackPawnB);
+        if (blackPawnC is not null) WithPiece(blackPawnC);
+        if (blackPawnD is not null) WithPiece(blackPawnD);
+        if (blackPawnE is not null) WithPiece(blackPawnE);
+        if (blackPawnF is not null) WithPiece(blackPawnF);
+        if (blackPawnG is not null) WithPiece(blackPawnG);
+        if (blackPawnH is not null) WithPiece(blackPawnH);
 
-    public BoardBuilder WithPiece(Piece piece, bool overlap = true)
-    {
-        if (overlap || Pieces == null) Pieces = new List<Piece>();
-        Pieces.Add(piece);
         return this;
-    }
-
-    public BoardBuilder WithSquare(BoardSquare square, bool overlap = true)
-    {
-        if (overlap || Squares == null) Squares = new List<BoardSquare>();
-        Squares.Add(square);
-        return this;
-    }
-
-    public static BoardBuilder New() => new();
-
-    public Board Build()
-    {
-        foreach (var square in Squares)
-        {
-            _board.AddSquare(square);
-        }
-
-        foreach (var piece in Pieces)
-        {
-            _board.AddPiece(piece);
-        }
-
-        return _board;
     }
 }
