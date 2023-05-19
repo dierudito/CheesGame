@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 public class PawnPieceEntityTest
 {
     [Fact(DisplayName = "Should create white Pawn")]
-    [Trait(nameof(PawnPiece), nameof(PawnPiece.CreateWhitePawn))]
+    [Trait(nameof(PawnPiece), "Create Pawn")]
     public void ShouldCreateWhitePawn()
     {
         // Arrange
@@ -22,7 +22,7 @@ public class PawnPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create black Pawn")]
-    [Trait(nameof(PawnPiece), nameof(PawnPiece.CreateBlackPawn))]
+    [Trait(nameof(PawnPiece), "Create Pawn")]
     public void ShouldCreateBlackPawn()
     {
         // Arrange
@@ -38,7 +38,7 @@ public class PawnPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create all Pawns")]
-    [Trait(nameof(PawnPiece), nameof(PawnPiece.CreateAllPawns))]
+    [Trait(nameof(PawnPiece), "Create Pawn")]
     public void ShouldCreateAllPawns()
     {
         // Arrange

@@ -1,8 +1,4 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities;
-using Moreno.ChessGame.Domain.Entities.Base;
-
-namespace Moreno.ChessGame.Domain.Value_Objects;
+﻿namespace Moreno.ChessGame.Domain.Value_Objects;
 
 public static class QueenMoveVo
 {

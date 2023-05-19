@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 public class KnightPieceEntityTest
 {
     [Fact(DisplayName = "Should create white Knight of Queen")]
-    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateWhiteKnightOfQueen))]
+    [Trait(nameof(KnightPiece), "Create Knight")]
     public void ShouldCreateWhiteKnightOfQueen()
     {
         // Arrange
@@ -21,7 +21,7 @@ public class KnightPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create white Knight of King")]
-    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateWhiteKnightOfKing))]
+    [Trait(nameof(KnightPiece), "Create Knight")]
     public void ShouldCreateWhiteKnightOfKing()
     {
         // Arrange
@@ -36,7 +36,7 @@ public class KnightPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create black Knight of Queen")]
-    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateBlackKnightOfQueen))]
+    [Trait(nameof(KnightPiece), "Create Knight")]
     public void ShouldCreateBlackKnightOfQueen()
     {
         // Arrange
@@ -51,7 +51,7 @@ public class KnightPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create black Knight of King")]
-    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateBlackKnightOfKing))]
+    [Trait(nameof(KnightPiece), "Create Knight")]
     public void ShouldCreateBlackKnightOfKing()
     {
         // Arrange
@@ -66,7 +66,7 @@ public class KnightPieceEntityTest
         response.PieceAddressDto.Should().BeEquivalentTo(expectedResponse.PieceAddressDto);
     }
     [Fact(DisplayName = "Should create all Knights")]
-    [Trait(nameof(KnightPiece), nameof(KnightPiece.CreateAllKnights))]
+    [Trait(nameof(KnightPiece), "Create Knight")]
     public void ShouldCreateAllKnights()
     {
         // Arrange

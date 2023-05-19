@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 public class QueenPieceEntityTest
 {
     [Fact(DisplayName = "Should create white Queen")]
-    [Trait("Queen Piece", "Domain")]
+    [Trait(nameof(QueenPiece), "Create Queen")]
     public void ShouldCreateWhiteQueen()
     {
         // Arrange
@@ -22,7 +22,7 @@ public class QueenPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create black Queen")]
-    [Trait("Queen Piece", "Domain")]
+    [Trait(nameof(QueenPiece), "Create Queen")]
     public void ShouldCreateBlackQueen()
     {
         // Arrange
@@ -38,7 +38,7 @@ public class QueenPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create all Queens")]
-    [Trait("Queen Piece", "Domain")]
+    [Trait(nameof(QueenPiece), "Create Queen")]
     public void ShouldCreateAllQueens()
     {
         // Arrange
@@ -65,7 +65,7 @@ public class QueenPieceEntityTest
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.D, BoardRowEnum.One)]
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.F, BoardRowEnum.One)]
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.B, BoardRowEnum.One)]
-    [Trait("Queen Piece", "Domain")]
+    [Trait(nameof(QueenPiece), nameof(QueenPiece.MoveTo))]
     public void ShouldMoveToAnotherAddressSuccessfully(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -98,7 +98,7 @@ public class QueenPieceEntityTest
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.C, BoardRowEnum.One)]
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.E, BoardRowEnum.One)]
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.G, BoardRowEnum.One)]
-    [Trait("Queen Piece", "Domain")]
+    [Trait(nameof(QueenPiece), nameof(QueenPiece.MoveTo))]
     public void ShouldnotMoveToWrongAddress(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)

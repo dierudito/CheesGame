@@ -1,6 +1,4 @@
-﻿using Moreno.ChessGame.Domain.Entities.Base;
-
-namespace Moreno.ChessGame.Domain.Interfaces.Services.Base;
+﻿namespace Moreno.ChessGame.Domain.Interfaces.Services.Base;
 
 public interface IBasePieceService<T> where T : Piece
 {

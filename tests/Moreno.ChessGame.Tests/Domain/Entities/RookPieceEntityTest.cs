@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 public class RookPieceEntityTest
 {
     [Fact(DisplayName = "Should create white Rook of Queen")]
-    [Trait("Rook Piece", "Domain")]
+    [Trait(nameof(RookPiece), "Create Rook")]
     public void ShouldCreateWhiteRookOfQueen()
     {
         // Arrange
@@ -22,7 +22,7 @@ public class RookPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create white Rook of King")]
-    [Trait("Rook Piece", "Domain")]
+    [Trait(nameof(RookPiece), "Create Rook")]
     public void ShouldCreateWhiteRookOfKing()
     {
         // Arrange
@@ -38,7 +38,7 @@ public class RookPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create black Rook of Queen")]
-    [Trait("Rook Piece", "Domain")]
+    [Trait(nameof(RookPiece), "Create Rook")]
     public void ShouldCreateBlackRookOfQueen()
     {
         // Arrange
@@ -54,7 +54,7 @@ public class RookPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create black Rook of King")]
-    [Trait("Rook Piece", "Domain")]
+    [Trait(nameof(RookPiece), "Create Rook")]
     public void ShouldCreateBlackRookOfKing()
     {
         // Arrange
@@ -70,7 +70,7 @@ public class RookPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create all Rooks")]
-    [Trait("Rook Piece", "Domain")]
+    [Trait(nameof(RookPiece), "Create Rook")]
     public void ShouldCreateAllRooks()
     {
         // Arrange
@@ -95,7 +95,7 @@ public class RookPieceEntityTest
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.C, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.E, BoardRowEnum.Three)]
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.H, BoardRowEnum.Three)]
-    [Trait("Rook Piece", "Domain")]
+    [Trait(nameof(RookPiece), nameof(RookPiece.MoveTo))]
     public void ShouldMoveToAnotherAddressSuccessfully(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)
@@ -129,7 +129,7 @@ public class RookPieceEntityTest
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.C, BoardRowEnum.Six)]
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.E, BoardRowEnum.Two)]
     [InlineData(BoardColumnEnum.D, BoardRowEnum.Three, BoardColumnEnum.H, BoardRowEnum.Four)]
-    [Trait("Rook Piece", "Domain")]
+    [Trait(nameof(RookPiece), nameof(RookPiece.MoveTo))]
     public void ShouldnotMoveToWrongAddress(
         BoardColumnEnum columnSource, BoardRowEnum rowSource,
         BoardColumnEnum columnTarget, BoardRowEnum rowTarget)

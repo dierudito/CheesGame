@@ -1,6 +1,4 @@
-﻿using DomainValidation.Interfaces.Specification;
-
-namespace Moreno.ChessGame.Domain.Specifications.Pieces.Kings;
+﻿namespace Moreno.ChessGame.Domain.Specifications.Pieces.Kings;
 
 public class KingShouldBeOnAnAllowedSquareOnTheBoardSpecification(IBoardRepository _boardRepository) :
     ISpecification<KingPiece>

@@ -6,7 +6,7 @@ namespace Moreno.ChessGame.UnitaryTests.Domain.Entities;
 public class KingPieceEntityTest
 {
     [Fact(DisplayName = "Should create white King")]
-    [Trait(nameof(KingPiece), nameof(KingPiece.CreateWhiteKing))]
+    [Trait(nameof(KingPiece), "Create King")]
     public void ShouldCreateWhiteKing()
     {
         // Arrange
@@ -22,7 +22,7 @@ public class KingPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create black King")]
-    [Trait(nameof(KingPiece), nameof(KingPiece.CreateBlackKing))]
+    [Trait(nameof(KingPiece), "Create King")]
     public void ShouldCreateBlackKing()
     {
         // Arrange
@@ -38,7 +38,7 @@ public class KingPieceEntityTest
     }
 
     [Fact(DisplayName = "Should create all Kings")]
-    [Trait(nameof(KingPiece), nameof(KingPiece.CreateAllKings))]
+    [Trait(nameof(KingPiece), "Create King")]
     public void ShouldCreateAllKings()
     {
         // Arrange

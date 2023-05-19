@@ -1,5 +1,4 @@
-﻿using DomainValidation.Validation;
-using Moreno.ChessGame.Domain.Specifications.Pieces.Kings;
+﻿using Moreno.ChessGame.Domain.Specifications.Pieces.Kings;
 
 namespace Moreno.ChessGame.Domain.Validations.Pieces;
 

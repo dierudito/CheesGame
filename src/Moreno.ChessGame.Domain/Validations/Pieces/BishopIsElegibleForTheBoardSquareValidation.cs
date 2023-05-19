@@ -1,7 +1,4 @@
-﻿using DomainValidation.Validation;
-using Moreno.ChessGame.Domain.Entities.Pieces;
-using Moreno.ChessGame.Domain.Interfaces.Repositories;
-using Moreno.ChessGame.Domain.Specifications.Pieces.Bishops;
+﻿using Moreno.ChessGame.Domain.Specifications.Pieces.Bishops;
 
 namespace Moreno.ChessGame.Domain.Validations.Pieces;
 

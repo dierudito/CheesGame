@@ -1,9 +1,4 @@
-﻿using Moreno.ChessGame.Domain.Dtos;
-using Moreno.ChessGame.Domain.Entities.Base;
-using Moreno.ChessGame.Domain.Entities;
-using Moreno.ChessGame.Domain.Enums;
-
-namespace Moreno.ChessGame.Domain.Value_Objects;
+﻿namespace Moreno.ChessGame.Domain.Value_Objects;
 
 public static class KnightMoveVo
 {
@@ -21,7 +16,7 @@ file static class WaysPiece
     public static IList<PieceAddressDto> GetWays(
         PieceAddressDto pieceAddressDto, IList<BoardSquare> boardSquares) =>
         boardSquares
-        .Where(bs => (bs.Row == pieceAddressDto.Row + 2 && 
+        .Where(bs => (bs.Row == pieceAddressDto.Row + 2 &&
                      (bs.Column == pieceAddressDto.Column - 1 || bs.Column == pieceAddressDto.Column + 1)) ||
                      (bs.Row == pieceAddressDto.Row - 2 &&
                      (bs.Column == pieceAddressDto.Column - 1 || bs.Column == pieceAddressDto.Column + 1)) ||

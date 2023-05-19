@@ -1,6 +1,4 @@
-﻿using DomainValidation.Interfaces.Specification;
-
-namespace Moreno.ChessGame.Domain.Specifications.Pieces.Kings;
+﻿namespace Moreno.ChessGame.Domain.Specifications.Pieces.Kings;
 
 public class KingShouldCastleWhenAllowedSpecification(IBoardRepository _boardRepository) :
     ISpecification<KingPiece>
@@ -80,7 +78,7 @@ public class KingShouldCastleWhenAllowedSpecification(IBoardRepository _boardRep
     private static int GetDistanceTravelesByKing(KingPiece kingPiece)
     {
         if (kingPiece.LastPieceAddress?.Row != kingPiece.PieceAddressDto.Row) return 0;
-        var distance = 
+        var distance =
             (byte)kingPiece.LastPieceAddress.Column - (byte)kingPiece.PieceAddressDto.Column;
 
         return distance < 0 ? distance * -1 : distance;

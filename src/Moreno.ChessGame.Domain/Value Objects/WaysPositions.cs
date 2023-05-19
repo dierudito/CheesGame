@@ -1,6 +1,4 @@
-﻿using Moreno.ChessGame.Domain.Entities;
-
-namespace Moreno.ChessGame.Domain.Value_Objects;
+﻿namespace Moreno.ChessGame.Domain.Value_Objects;
 
 public static class WaysPositions
 {
